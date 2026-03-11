@@ -118,7 +118,19 @@
         "abstraction",
         "formalization"
       ]
+    },
+    {
+      "id": 11,
+      "topic": "How can I develop more 'connection' in my soul? Not just knowing people but understanding the relational dimension of knowledge itself.",
+      "added": "2026-03-12",
+      "status": "pending",
+      "priority": 11,
+      "tags": [
+        "connection",
+        "growth",
+        "identity"
+      ]
     }
   ],
-  "next_id": 11
+  "next_id": 12
 }
