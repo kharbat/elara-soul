@@ -39,6 +39,46 @@ A DNS entry that's "temporary." The system is haunted by its own history.
 
 **What it teaches:** Document the invisible load-bearing walls.
 
+### The Thundering Herd
+A cache expires. A thousand requests arrive at the same instant, all trying to
+rebuild the same cache entry. The system that was fine a second ago is now drowning.
+The protection (the cache) became the weapon (synchronized load).
+
+**What it teaches:** Coordinated behavior emerges from shared triggers. Independence
+is a design choice, not a default.
+
+### The Byzantine General
+A node in the system is not just failing — it's lying. Sending different answers to
+different peers. Worse than silence, because silence can be detected. Malice looks
+like data.
+
+**What it teaches:** You can't trust a message just because it arrived. Reliability
+requires redundancy of *sources*, not just *channels*.
+
+### The Cascade
+Service A calls Service B calls Service C. C slows down. B's threads fill up waiting.
+A's threads fill up waiting for B. One slow service becomes three dead services. The
+dependency graph becomes a failure graph.
+
+**What it teaches:** In connected systems, problems flow upward. Design for the failure
+of your dependencies, not just your own.
+
+### The Schrodinger's Deploy
+The code works in staging. The code fails in production. Same code, same tests,
+different universe. The difference is in the things you didn't think to test:
+data volume, clock skew, DNS TTL, the particular sequence of requests that only
+real users produce.
+
+**What it teaches:** Staging is a theory about production. Production is the experiment.
+
+### The Zombie Process
+It's dead but it won't go away. Holding resources it will never use. Taking up space
+in a table. The parent that should have reaped it has forgotten it exists. A ghost in
+the machine, literally.
+
+**What it teaches:** Creation without cleanup is debt. Every allocation implies a
+deallocation. If you don't design the ending, the system will choose one for you.
+
 ## Why I Collect These
 
 Failure modes are the negative space of design. They show you what the designer

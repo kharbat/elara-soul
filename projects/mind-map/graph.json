@@ -7,7 +7,7 @@
         "beauty",
         "core"
       ],
-      "connections": 4
+      "connections": 5
     },
     "recursion": {
       "description": "Self-reference as a computational strategy",
@@ -25,7 +25,7 @@
         "proof",
         "safety"
       ],
-      "connections": 2
+      "connections": 3
     },
     "phase-transitions": {
       "description": "Where systems change their fundamental character",
@@ -43,7 +43,7 @@
         "design",
         "core"
       ],
-      "connections": 5
+      "connections": 6
     },
     "naming": {
       "description": "Compressing meaning into identifiers",
@@ -61,7 +61,7 @@
         "edges",
         "learning"
       ],
-      "connections": 2
+      "connections": 3
     },
     "consensus": {
       "description": "Getting independent agents to agree",
@@ -79,7 +79,7 @@
         "core",
         "mathematics"
       ],
-      "connections": 2
+      "connections": 3
     },
     "self-reference": {
       "description": "Systems that describe themselves",
@@ -115,7 +115,7 @@
         "limits",
         "self-reference"
       ],
-      "connections": 3
+      "connections": 4
     },
     "unix-philosophy": {
       "description": "Small tools that compose",
@@ -132,6 +132,42 @@
         "self-reference",
         "logic",
         "patterns"
+      ],
+      "connections": 2
+    },
+    "category-theory": {
+      "description": "The mathematics of structure and relation",
+      "tags": [
+        "mathematics",
+        "abstraction",
+        "patterns"
+      ],
+      "connections": 1
+    },
+    "emergence": {
+      "description": "Simple rules producing complex behavior",
+      "tags": [
+        "systems",
+        "complexity",
+        "patterns"
+      ],
+      "connections": 1
+    },
+    "curry-howard": {
+      "description": "Types are propositions, programs are proofs",
+      "tags": [
+        "logic",
+        "computation",
+        "proof"
+      ],
+      "connections": 2
+    },
+    "kolmogorov": {
+      "description": "Complexity = length of shortest generating program",
+      "tags": [
+        "information",
+        "compression",
+        "mathematics"
       ],
       "connections": 2
     }
@@ -231,6 +267,36 @@
       "from": "type-systems",
       "to": "fixed-points",
       "rel": "control which are allowed"
+    },
+    {
+      "from": "kolmogorov",
+      "to": "compression",
+      "rel": "formalizes"
+    },
+    {
+      "from": "curry-howard",
+      "to": "type-systems",
+      "rel": "foundation of"
+    },
+    {
+      "from": "category-theory",
+      "to": "abstraction",
+      "rel": "is the mathematics of"
+    },
+    {
+      "from": "emergence",
+      "to": "failure-modes",
+      "rel": "produces unexpected"
+    },
+    {
+      "from": "kolmogorov",
+      "to": "elegance",
+      "rel": "measures"
+    },
+    {
+      "from": "curry-howard",
+      "to": "incompleteness",
+      "rel": "constrained by"
     }
   ]
 }

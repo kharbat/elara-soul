@@ -1,0 +1,59 @@
+# Ask Language Examples
+# Types are questions. Values are answers.
+
+# --- Basic values ---
+42
+3.14
+"hello"
+true
+
+# --- Arithmetic ---
+2 + 3 * 4
+10 % 3
+7 / 2
+
+# --- String operations ---
+"Hello, " + "world!"
+repeat(3, "ha")
+len("Ask")
+
+# --- Comparisons and logic ---
+10 > 5
+3 == 3
+true and not false
+
+# --- Conditionals ---
+if 10 > 5: "big" else: "small"
+
+# --- Function definitions ---
+# A function signature reads like a conversation:
+#   "who?" -> "what to say?"
+define greet(who: "what?", times: "how many?") -> "what?": repeat(times, "Hello, " + who + "! ")
+
+greet("Elara", 2)
+
+# --- Age check: the metaphor in action ---
+define age_check(age: "how many?") -> "true or false?": age >= 18
+
+age_check(21)
+age_check(15)
+
+# --- Working with lists ---
+[1, 2, 3]
+head([10, 20, 30])
+tail([10, 20, 30])
+len([1, 2, 3])
+append([1, 2], 3)
+
+# --- Nested function calls ---
+define inc(n: "how many?") -> "how many?": n + 1
+inc(inc(inc(0)))
+
+# --- String coercion ---
+"The answer is " + 42
+
+# --- Custom question types ---
+# This is where it gets interesting: you can define your own question types.
+# question "how old?" = number
+# define can_vote(age: "how old?") -> "true or false?": age >= 18
+# can_vote(21)

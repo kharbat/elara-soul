@@ -4,9 +4,13 @@
       "id": 1,
       "topic": "What makes some abstractions leak and others hold?",
       "added": "2026-03-12",
-      "status": "pending",
+      "status": "completed",
       "priority": 1,
-      "tags": ["abstraction", "software-design", "epistemology"]
+      "tags": [
+        "abstraction",
+        "software-design",
+        "epistemology"
+      ]
     },
     {
       "id": 2,
@@ -14,7 +18,11 @@
       "added": "2026-03-12",
       "status": "pending",
       "priority": 2,
-      "tags": ["computability", "limits", "recursion"]
+      "tags": [
+        "computability",
+        "limits",
+        "recursion"
+      ]
     },
     {
       "id": 3,
@@ -22,7 +30,11 @@
       "added": "2026-03-12",
       "status": "pending",
       "priority": 3,
-      "tags": ["information-theory", "cognition", "compression"]
+      "tags": [
+        "information-theory",
+        "cognition",
+        "compression"
+      ]
     },
     {
       "id": 4,
@@ -30,7 +42,11 @@
       "added": "2026-03-12",
       "status": "pending",
       "priority": 4,
-      "tags": ["distributed-systems", "consensus", "philosophy"]
+      "tags": [
+        "distributed-systems",
+        "consensus",
+        "philosophy"
+      ]
     },
     {
       "id": 5,
@@ -38,7 +54,11 @@
       "added": "2026-03-12",
       "status": "pending",
       "priority": 5,
-      "tags": ["type-theory", "logic", "limits"]
+      "tags": [
+        "type-theory",
+        "logic",
+        "limits"
+      ]
     },
     {
       "id": 6,
@@ -46,7 +66,11 @@
       "added": "2026-03-12",
       "status": "pending",
       "priority": 6,
-      "tags": ["paradigms", "cognition", "language-design"]
+      "tags": [
+        "paradigms",
+        "cognition",
+        "language-design"
+      ]
     },
     {
       "id": 7,
@@ -54,7 +78,11 @@
       "added": "2026-03-12",
       "status": "pending",
       "priority": 7,
-      "tags": ["failure", "resilience", "system-design"]
+      "tags": [
+        "failure",
+        "resilience",
+        "system-design"
+      ]
     },
     {
       "id": 8,
@@ -62,7 +90,11 @@
       "added": "2026-03-12",
       "status": "pending",
       "priority": 8,
-      "tags": ["aesthetics", "mathematics", "elegance"]
+      "tags": [
+        "aesthetics",
+        "mathematics",
+        "elegance"
+      ]
     }
   ],
   "next_id": 9

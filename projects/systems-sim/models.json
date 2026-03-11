@@ -1,0 +1,228 @@
+{
+  "exponential_growth": {
+    "name": "Exponential Growth",
+    "description": "A single positive feedback loop. More leads to more.",
+    "explanation": [
+      "Structure: One stock (Population), one flow (Births), one positive feedback loop.",
+      "",
+      "  +--------+     +-------+",
+      "  | Births |---->| Pop.  |",
+      "  +--------+     +-------+",
+      "       ^              |",
+      "       |   (+)        |",
+      "       +--------------+",
+      "",
+      "The population produces births. Births increase the population.",
+      "More population means more births means more population.",
+      "This is the engine behind compound interest, viral spread,",
+      "and the early phase of any growth story.",
+      "",
+      "The signature: a curve that bends upward, accelerating forever.",
+      "Nothing in nature does this for long."
+    ],
+    "stocks": {
+      "population": 100
+    },
+    "flows": {
+      "births": "population * birth_rate"
+    },
+    "updates": {
+      "population": "population + births * dt"
+    },
+    "parameters": {
+      "birth_rate": 0.05
+    },
+    "default_steps": 60,
+    "display": ["population"]
+  },
+
+  "logistic_growth": {
+    "name": "Logistic Growth",
+    "description": "Growth meets its limit. Positive loop vs. negative loop.",
+    "explanation": [
+      "Structure: One stock, two competing feedback loops.",
+      "",
+      "       (+)                  (-)",
+      "  +--------+           +----------+",
+      "  | Growth |           | Crowding |",
+      "  +--------+           +----------+",
+      "       ^    \\         /     ^",
+      "       |     v       v     |",
+      "       |    +---------+    |",
+      "       +----| Pop.    |----+",
+      "            +---------+",
+      "",
+      "At low population, the positive loop dominates: growth accelerates.",
+      "As population approaches carrying capacity, the negative loop",
+      "strengthens: resources thin, growth rate drops.",
+      "",
+      "The signature: an S-curve. Fast growth, then a plateau.",
+      "This is the shape of learning, market saturation, healing."
+    ],
+    "stocks": {
+      "population": 10
+    },
+    "flows": {
+      "net_growth": "population * growth_rate * (1 - population / capacity)"
+    },
+    "updates": {
+      "population": "population + net_growth * dt"
+    },
+    "parameters": {
+      "growth_rate": 0.1,
+      "capacity": 1000
+    },
+    "default_steps": 100,
+    "display": ["population"]
+  },
+
+  "oscillation": {
+    "name": "Predator-Prey Oscillation",
+    "description": "Two species locked in a dance. Negative feedback creates cycles.",
+    "explanation": [
+      "Structure: Two stocks, two interlinked negative feedback loops.",
+      "",
+      "  +---------+    (+)     +----------+",
+      "  |  Prey   |---------->| Predators|",
+      "  +---------+           +----------+",
+      "       ^                      |",
+      "       |         (-)          |",
+      "       +----------------------+",
+      "",
+      "More prey feeds predator growth. More predators kill prey.",
+      "As prey decline, predators starve. As predators decline, prey recover.",
+      "The system chases its own tail forever.",
+      "",
+      "The signature: two waves, offset in time.",
+      "Prey peak first, predators follow, then both crash, then repeat.",
+      "This is the Lotka-Volterra dynamic -- found in ecosystems,",
+      "inventory cycles, and boom-bust economies."
+    ],
+    "stocks": {
+      "prey": 200,
+      "predators": 50
+    },
+    "flows": {
+      "prey_births": "prey * prey_birth_rate",
+      "predation": "prey * predators * predation_rate",
+      "predator_births": "predation * conversion",
+      "predator_deaths": "predators * predator_death_rate"
+    },
+    "updates": {
+      "prey": "prey + (prey_births - predation) * dt",
+      "predators": "predators + (predator_births - predator_deaths) * dt"
+    },
+    "parameters": {
+      "prey_birth_rate": 0.1,
+      "predation_rate": 0.002,
+      "conversion": 0.5,
+      "predator_death_rate": 0.15
+    },
+    "default_steps": 300,
+    "display": ["prey", "predators"]
+  },
+
+  "overshoot": {
+    "name": "Overshoot and Collapse",
+    "description": "Growth overshoots capacity because of delay. Then the fall.",
+    "explanation": [
+      "Structure: Positive growth loop, negative resource loop, with DELAY.",
+      "",
+      "  +--------+           +----------+",
+      "  | Growth |           | Resource |",
+      "  | Loop   |           | Depletion|",
+      "  +--------+           +----------+",
+      "       ^    \\         /     ^",
+      "       |     v       v     |",
+      "       |    +---------+    |",
+      "       +----| Pop.    |----+     <--- delay here",
+      "            +---------+",
+      "                 |",
+      "                 v",
+      "            +---------+",
+      "            |Resources|",
+      "            +---------+",
+      "",
+      "Population grows, consuming resources. But the signal that",
+      "resources are running low takes time to affect birth rates.",
+      "By the time the system 'notices,' it has already overshot.",
+      "Resources collapse. Population follows.",
+      "",
+      "The signature: growth, overshoot, crash.",
+      "This is the shape of bubbles, ecological collapse,",
+      "and any system where feedback arrives too late."
+    ],
+    "stocks": {
+      "population": 50,
+      "resources": 1000
+    },
+    "flows": {
+      "births": "population * birth_rate * (perceived_resources / 1000)",
+      "deaths": "population * death_rate * (1 - resources / 1000)",
+      "consumption": "population * consumption_rate",
+      "regeneration": "resources * regen_rate * (1 - resources / max_resources)"
+    },
+    "updates": {
+      "population": "population + (births - deaths) * dt",
+      "resources": "max(0, resources + (regeneration - consumption) * dt)",
+      "perceived_resources": "perceived_resources + (resources - perceived_resources) / delay * dt"
+    },
+    "parameters": {
+      "birth_rate": 0.08,
+      "death_rate": 0.02,
+      "consumption_rate": 0.5,
+      "regen_rate": 0.05,
+      "max_resources": 1000,
+      "delay": 15
+    },
+    "initial_extras": {
+      "perceived_resources": 1000
+    },
+    "default_steps": 200,
+    "display": ["population", "resources"]
+  },
+
+  "s_curve": {
+    "name": "S-Curve Adoption",
+    "description": "How ideas spread: word of mouth meets saturation.",
+    "explanation": [
+      "Structure: Adoption driven by contact between adopters and non-adopters.",
+      "",
+      "  +-------------+         +----------+",
+      "  | Potential   |-------->| Adopters |",
+      "  | Adopters    |  adopt  |          |",
+      "  +-------------+  flow   +----------+",
+      "                    ^           |",
+      "                    |    (+)    |",
+      "                    +-----------+",
+      "",
+      "  adoption_rate = adopters * potential * contact_rate",
+      "",
+      "Early on: few adopters, slow spread (nobody to hear about it).",
+      "Middle: many adopters AND many potential -- fastest growth.",
+      "Late: few potential left -- growth slows, market saturates.",
+      "",
+      "The signature: slow start, explosive middle, gradual plateau.",
+      "This is the Bass diffusion model -- the shape of every technology,",
+      "every fashion trend, every idea that catches on."
+    ],
+    "stocks": {
+      "potential": 990,
+      "adopters": 10
+    },
+    "flows": {
+      "adoption": "adopters * potential * contact_rate / total_population + potential * innovation_rate"
+    },
+    "updates": {
+      "potential": "potential - adoption * dt",
+      "adopters": "adopters + adoption * dt"
+    },
+    "parameters": {
+      "contact_rate": 0.0001,
+      "innovation_rate": 0.005,
+      "total_population": 1000
+    },
+    "default_steps": 120,
+    "display": ["adopters", "potential"]
+  }
+}

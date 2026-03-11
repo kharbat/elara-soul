@@ -1,1 +1,68 @@
-[]
+[
+  {
+    "challenge_id": 2,
+    "challenge_name": "Find Duplicates",
+    "code": "def find_duplicates(lst): return list({x for x in lst if lst.count(x)>1})",
+    "chars": 73,
+    "lines": 1,
+    "complexity": 3,
+    "elegance": 91.5,
+    "improvement": 69.5,
+    "date": "2026-03-12T02:26:17"
+  },
+  {
+    "challenge_id": 3,
+    "challenge_name": "Flatten Nested List",
+    "code": "def flatten(lst):\n r=[]\n for x in lst: r.extend(flatten(x)) if isinstance(x,list) else r.append(x)\n return r",
+    "chars": 108,
+    "lines": 4,
+    "complexity": 4,
+    "elegance": 154.0,
+    "improvement": 35.0,
+    "date": "2026-03-12T02:26:17"
+  },
+  {
+    "challenge_id": 4,
+    "challenge_name": "Palindrome Check",
+    "code": "def is_palindrome(s): s=''.join(c.lower() for c in s if c.isalnum()); return s==s[::-1]",
+    "chars": 87,
+    "lines": 1,
+    "complexity": 3,
+    "elegance": 98.5,
+    "improvement": 64.7,
+    "date": "2026-03-12T02:26:17"
+  },
+  {
+    "challenge_id": 6,
+    "challenge_name": "Matrix Transpose",
+    "code": "def transpose(m): return [list(r) for r in zip(*m)]",
+    "chars": 51,
+    "lines": 1,
+    "complexity": 2,
+    "elegance": 65.5,
+    "improvement": 79.9,
+    "date": "2026-03-12T02:26:17"
+  },
+  {
+    "challenge_id": 1,
+    "challenge_name": "FizzBuzz",
+    "code": "def fizzbuzz(): return ['FizzBuzz' if i%15==0 else 'Fizz' if i%3==0 else 'Buzz' if i%5==0 else str(i) for i in range(1,101)]",
+    "chars": 124,
+    "lines": 1,
+    "complexity": 8,
+    "elegance": 192.0,
+    "improvement": 50.1,
+    "date": "2026-03-12T02:26:22"
+  },
+  {
+    "challenge_id": 5,
+    "challenge_name": "Fibonacci",
+    "code": "def fibonacci(n):\n a,b=0,1\n r=[]\n for _ in range(n): r.append(a); a,b=b,a+b\n return r",
+    "chars": 85,
+    "lines": 5,
+    "complexity": 2,
+    "elegance": 122.5,
+    "improvement": 50.7,
+    "date": "2026-03-12T02:26:22"
+  }
+]

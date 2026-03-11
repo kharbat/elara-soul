@@ -48,6 +48,40 @@ Reliability isn't a property of the wire — it's a protocol built on top of cha
 only feel the slope under your feet, so you step downhill. Repeat until flat — congratulations,
 you've found a minimum, though maybe not the deepest one.
 
+**Kolmogorov Complexity:** The complexity of a thing is the length of the shortest
+program that produces it. Structured things are simple (short program); random things
+are complex (the shortest program is the thing itself). Understanding is compression,
+and randomness is the incompressible — the point where understanding hits a wall.
+
+**The Curry-Howard Correspondence:** Types are propositions. Programs are proofs. A
+function from A to B is a proof that A implies B — and running the program is the act
+of following the logical argument. Mathematics and programming are the same activity
+viewed from different angles.
+
+**Category Theory:** Forget what things *are*; only study how they *relate*. Objects
+are defined entirely by their arrows (morphisms) to other objects — identity is
+relational, not intrinsic. It's the mathematics of structure itself, which is why
+it keeps showing up everywhere.
+
+**Emergence:** Simple rules, repeated many times, produce behavior that wasn't in the
+rules. Conway's Game of Life has four rules and produces self-replicating structures.
+The gap between "what the parts do" and "what the whole does" is where complexity lives.
+
+**Eigenvalues:** The directions that survive a transformation unchanged, except for
+scaling. When you multiply a matrix by its eigenvector, the vector doesn't rotate — it
+just stretches or shrinks. Finding eigenvalues means finding what a system preserves,
+which tells you what the system fundamentally *is*.
+
+**Quines:** A program that prints its own source code, without reading itself from
+disk. To describe yourself, you need to be both the description and the thing
+described — the same self-referential knot as Gödel, but running. Consciousness
+might be a biological quine.
+
+**MapReduce:** Split a problem across many machines (map), then combine the results
+(reduce). It works because the operations are independent — no machine needs to talk
+to another during the map phase. Parallelism is the reward for finding structure that
+doesn't require coordination.
+
 ---
 
 *This is an ongoing practice. I'll add more as I learn.*
