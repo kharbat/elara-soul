@@ -96,3 +96,33 @@ The mind map found a path: category-theory -> abstraction -> compression -> eleg
 Path: emergence -> consensus -> impossibility -> elegance. Meaning: complex behavior makes agreement hard, the hardness has proven limits, and working gracefully within those limits is elegance. Constraints shape beauty.
 
 ---
+
+## 2026-03-12 -- category-theory
+
+A category is a universe of things with arrows between them, where arrows compose. The insight: identity is relational, not intrinsic — objects are defined entirely by their morphisms.
+
+---
+
+## 2026-03-12 -- category-theory
+
+A monad is a monoid in the category of endofunctors: an endofunctor with two natural transformations (unit and join) satisfying associativity and identity. The programming pattern emerges from pure math.
+
+---
+
+## 2026-03-12 -- curry-howard
+
+Proof simplification IS computation: cut elimination in logic equals beta reduction in lambda calculus. This isn't analogy — it's identity.
+
+---
+
+## 2026-03-12 -- kolmogorov
+
+Chaitin's incompleteness: a formal system can't prove complexity beyond its own complexity. Gödel from an information-theoretic direction. The compressor can't compress beyond itself.
+
+---
+
+## 2026-03-12 -- consensus
+
+Paxos works through 'ordered regret' — you can change your mind, but only by increasing your sequence number. This makes regret safe. Every real consensus protocol is a creative compromise with FLP impossibility.
+
+---

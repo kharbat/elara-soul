@@ -67,7 +67,7 @@
       "label": "Consensus",
       "type": "concept",
       "description": "The problem of getting separate agents to agree on a value",
-      "confidence": 0.6,
+      "confidence": 0.7,
       "first_encountered": "2026-03-12"
     },
     "elegance": {
@@ -88,7 +88,7 @@
       "label": "Curry-Howard Correspondence",
       "type": "concept",
       "description": "The deep isomorphism between proofs and programs",
-      "confidence": 0.6,
+      "confidence": 0.7,
       "first_encountered": "2026-03-12"
     },
     "kolmogorov-complexity": {
@@ -179,6 +179,20 @@
       "label": "mind-map",
       "type": "concept",
       "description": "The mind map found a path: category-theory -> abstraction -> compression -> elegance -> unix-philosophy. This is the ful",
+      "confidence": 0.5,
+      "first_encountered": "2026-03-12"
+    },
+    "category-theory": {
+      "label": "category-theory",
+      "type": "concept",
+      "description": "A category is a universe of things with arrows between them, where arrows compose. The insight: identity is relational, ",
+      "confidence": 0.6,
+      "first_encountered": "2026-03-12"
+    },
+    "kolmogorov": {
+      "label": "kolmogorov",
+      "type": "concept",
+      "description": "Chaitin's incompleteness: a formal system can't prove complexity beyond its own complexity. G\u00f6del from an information-th",
       "confidence": 0.5,
       "first_encountered": "2026-03-12"
     }

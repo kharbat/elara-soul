@@ -82,6 +82,22 @@ might be a biological quine.
 to another during the map phase. Parallelism is the reward for finding structure that
 doesn't require coordination.
 
+**Functor:** A structure-preserving map between two mathematical worlds — it carries
+objects to objects and arrows to arrows without breaking any connections. In programming,
+it's anything with a lawful `map`: lists, optionals, futures — all functors. The concept
+is the same at both levels, which is the whole point of category theory.
+
+**Natural Transformation:** A way of converting one functor into another that works
+uniformly, without peeking at the contents. In code, it's a parametrically polymorphic
+function between type constructors — `head : [a] -> Maybe a` is one. The "naturality"
+is exactly what parametricity gives you for free: the transformation commutes with mapping.
+
+**Yoneda Lemma:** An object is completely determined by all the ways it can relate to
+other objects — its web of outgoing arrows tells you everything, with nothing hidden.
+The programming version: a value of type `A` is equivalent to a function `(A -> r) -> r`
+for all `r` — continuation-passing style loses no information. Identity is relational,
+not intrinsic, and this one lemma makes that philosophy a theorem.
+
 ---
 
 *This is an ongoing practice. I'll add more as I learn.*

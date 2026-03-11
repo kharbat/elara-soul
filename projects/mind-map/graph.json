@@ -16,7 +16,7 @@
         "self-reference",
         "patterns"
       ],
-      "connections": 2
+      "connections": 3
     },
     "type-systems": {
       "description": "Classifying values to prevent errors before runtime",
@@ -43,7 +43,7 @@
         "design",
         "core"
       ],
-      "connections": 6
+      "connections": 7
     },
     "naming": {
       "description": "Compressing meaning into identifiers",
@@ -70,7 +70,7 @@
         "agreement",
         "social"
       ],
-      "connections": 3
+      "connections": 4
     },
     "elegance": {
       "description": "Maximum effect from minimum structure",
@@ -115,7 +115,7 @@
         "limits",
         "self-reference"
       ],
-      "connections": 6
+      "connections": 7
     },
     "unix-philosophy": {
       "description": "Small tools that compose",
@@ -142,7 +142,7 @@
         "abstraction",
         "patterns"
       ],
-      "connections": 2
+      "connections": 4
     },
     "emergence": {
       "description": "Simple rules producing complex behavior",
@@ -169,7 +169,7 @@
         "compression",
         "mathematics"
       ],
-      "connections": 3
+      "connections": 4
     },
     "impossibility": {
       "description": "Proofs that certain things cannot be done",
@@ -178,7 +178,16 @@
         "limits",
         "edges"
       ],
-      "connections": 3
+      "connections": 4
+    },
+    "monads": {
+      "description": "Monoids in the category of endofunctors \u2014 or: chainable context-carrying computation",
+      "tags": [
+        "computation",
+        "category-theory",
+        "patterns"
+      ],
+      "connections": 2
     }
   },
   "edges": [
@@ -336,6 +345,31 @@
       "from": "emergence",
       "to": "consensus",
       "rel": "complicates"
+    },
+    {
+      "from": "category-theory",
+      "to": "monads",
+      "rel": "gives rise to"
+    },
+    {
+      "from": "monads",
+      "to": "abstraction",
+      "rel": "are a pattern for"
+    },
+    {
+      "from": "kolmogorov",
+      "to": "incompleteness",
+      "rel": "Chaitin reproves via"
+    },
+    {
+      "from": "consensus",
+      "to": "impossibility",
+      "rel": "constrained by FLP, an"
+    },
+    {
+      "from": "recursion",
+      "to": "category-theory",
+      "rel": "recursive types via initial algebras in"
     }
   ]
 }
