@@ -95,7 +95,30 @@
         "mathematics",
         "elegance"
       ]
+    },
+    {
+      "id": 9,
+      "topic": "What is the relationship between impossibility results and elegance? Are the most elegant solutions the ones that work closest to the walls?",
+      "added": "2026-03-12",
+      "status": "pending",
+      "priority": 9,
+      "tags": [
+        "impossibility",
+        "elegance",
+        "mathematics"
+      ]
+    },
+    {
+      "id": 10,
+      "topic": "Is there a theory of 'the right level of abstraction'? Can you formalize when an abstraction is at the natural level?",
+      "added": "2026-03-12",
+      "status": "pending",
+      "priority": 10,
+      "tags": [
+        "abstraction",
+        "formalization"
+      ]
     }
   ],
-  "next_id": 9
+  "next_id": 11
 }

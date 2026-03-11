@@ -70,7 +70,7 @@
         "agreement",
         "social"
       ],
-      "connections": 1
+      "connections": 3
     },
     "elegance": {
       "description": "Maximum effect from minimum structure",
@@ -79,7 +79,7 @@
         "core",
         "mathematics"
       ],
-      "connections": 3
+      "connections": 4
     },
     "self-reference": {
       "description": "Systems that describe themselves",
@@ -115,7 +115,7 @@
         "limits",
         "self-reference"
       ],
-      "connections": 4
+      "connections": 6
     },
     "unix-philosophy": {
       "description": "Small tools that compose",
@@ -142,7 +142,7 @@
         "abstraction",
         "patterns"
       ],
-      "connections": 1
+      "connections": 2
     },
     "emergence": {
       "description": "Simple rules producing complex behavior",
@@ -151,7 +151,7 @@
         "complexity",
         "patterns"
       ],
-      "connections": 1
+      "connections": 2
     },
     "curry-howard": {
       "description": "Types are propositions, programs are proofs",
@@ -160,7 +160,7 @@
         "computation",
         "proof"
       ],
-      "connections": 2
+      "connections": 3
     },
     "kolmogorov": {
       "description": "Complexity = length of shortest generating program",
@@ -169,7 +169,16 @@
         "compression",
         "mathematics"
       ],
-      "connections": 2
+      "connections": 3
+    },
+    "impossibility": {
+      "description": "Proofs that certain things cannot be done",
+      "tags": [
+        "mathematics",
+        "limits",
+        "edges"
+      ],
+      "connections": 3
     }
   },
   "edges": [
@@ -297,6 +306,36 @@
       "from": "curry-howard",
       "to": "incompleteness",
       "rel": "constrained by"
+    },
+    {
+      "from": "impossibility",
+      "to": "incompleteness",
+      "rel": "G\u00f6del is an instance of"
+    },
+    {
+      "from": "impossibility",
+      "to": "consensus",
+      "rel": "FLP is an instance of"
+    },
+    {
+      "from": "impossibility",
+      "to": "elegance",
+      "rel": "defines the walls that"
+    },
+    {
+      "from": "kolmogorov",
+      "to": "incompleteness",
+      "rel": "uncomputability connects"
+    },
+    {
+      "from": "category-theory",
+      "to": "curry-howard",
+      "rel": "provides the framework for"
+    },
+    {
+      "from": "emergence",
+      "to": "consensus",
+      "rel": "complicates"
     }
   ]
 }

@@ -1,0 +1,92 @@
+# examples.break — Real-world-inspired failure scenarios
+
+system WebApp {
+  component LoadBalancer
+  component Frontend
+  component Backend
+  component Database
+  component Cache
+  component Queue
+
+  LoadBalancer -> Frontend "HTTP"
+  Frontend -> Backend "HTTP"
+  Backend -> Database "SQL"
+  Backend -> Cache "Redis"
+  Backend -> Queue "AMQP"
+}
+
+# 1. Classic cascade: slow database poisons everything upstream
+failure SlowQuery in WebApp {
+  trigger: Database.slow(latency > 2000ms on users table)
+  propagates: Backend.threads_exhausted(connection pool drained waiting for Database)
+  propagates: Frontend.timeout(502 Bad Gateway after 30s)
+  propagates: LoadBalancer.health_check_fail(no healthy backends)
+  root_cause: "Full table scan after ORM upgrade removed index hint"
+  pattern: cascade
+  lesson: "Slow is worse than down — a timeout at least fails fast"
+}
+
+# 2. Cache stampede after a deploy wipes warm cache
+failure CacheStampede in WebApp {
+  trigger: Cache.expires(key=product_catalog after deploy flush)
+  propagates: Backend.overload(800 concurrent cache rebuilds)
+  propagates: Database.overload(800 identical queries in 200ms)
+  root_cause: "Deploy script runs FLUSHALL instead of targeted invalidation"
+  pattern: thundering_herd
+  lesson: "Coordinate your invalidation, or your invalidation coordinates you"
+}
+
+# 3. A ghost dependency nobody documented
+system PaymentService {
+  component API
+  component Ledger
+  component FraudCheck
+  component NotificationService
+
+  API -> Ledger "gRPC"
+  API -> FraudCheck "gRPC"
+  API -> NotificationService "HTTP"
+}
+
+failure GhostDNS in PaymentService {
+  trigger: NotificationService.unreachable(DNS resolver timeout)
+  propagates: API.slow(unexpected 5s timeout on fire-and-forget call)
+  propagates: Ledger.backpressure(API throughput drops 80 percent)
+  root_cause: "Notification call was synchronous despite being labeled async in docs — hidden undocumented coupling"
+  pattern: ghost_dependency
+  lesson: "If you haven't tested the failure path, you don't have a fallback — you have a wish"
+}
+
+# 4. Gradual memory leak that stays below alerts
+failure MemoryCreep in WebApp {
+  trigger: Backend.leak(gradual heap growth 50MB per hour)
+  propagates: Backend.slow(GC pauses climb from 10ms to 800ms over 12 hours)
+  propagates: Frontend.timeout(intermittent 504s that clear on retry)
+  root_cause: "Event listener registered on every request but never unregistered — slow drift below alert threshold"
+  pattern: slow_knife
+  lesson: "The failures that page you at 3am are not the scary ones — the scary ones drift for weeks"
+}
+
+# 5. Split-brain after network partition
+system DistributedCache {
+  component NodeA
+  component NodeB
+  component NodeC
+  component Coordinator
+
+  Coordinator -> NodeA "Raft"
+  Coordinator -> NodeB "Raft"
+  Coordinator -> NodeC "Raft"
+  NodeA -> NodeB "Gossip"
+  NodeB -> NodeC "Gossip"
+}
+
+failure SplitBrain in DistributedCache {
+  trigger: Coordinator.partition(network split isolates NodeC)
+  propagates: NodeC.elect_self(timeout waiting for heartbeat — becomes independent leader)
+  propagates: NodeA.disagree(two leaders accept conflicting writes)
+  propagates: Coordinator.corrupt(inconsistent state after partition heals)
+  root_cause: "Quorum size was 1 in staging config that leaked to production"
+  pattern: byzantine
+  lesson: "Distributed systems do not fail — they diverge, and you find out later"
+}

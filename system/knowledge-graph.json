@@ -32,7 +32,7 @@
       "label": "Compression",
       "type": "concept",
       "description": "Reducing representation size while preserving essential structure",
-      "confidence": 0.7999999999999999,
+      "confidence": 0.8999999999999999,
       "first_encountered": "2026-03-12"
     },
     "understanding": {
@@ -153,6 +153,34 @@
       "description": "Cubical type theory resolves the tension between computation and univalence \u2014 equality proofs can compute, not just exis",
       "confidence": 0.5,
       "first_encountered": "2026-03-12"
+    },
+    "impossibility": {
+      "label": "impossibility",
+      "type": "concept",
+      "description": "Impossibility results are the most useful theorems because they reveal the shape of all possible solutions, not just one",
+      "confidence": 0.6,
+      "first_encountered": "2026-03-12"
+    },
+    "feedback-loops": {
+      "label": "feedback-loops",
+      "type": "concept",
+      "description": "The second-system effect: understanding a problem is not the same as understanding the solution. First systems succeed t",
+      "confidence": 0.5,
+      "first_encountered": "2026-03-12"
+    },
+    "goedels-incompleteness-theorems": {
+      "label": "Goedel's Incompleteness Theorems",
+      "type": "concept",
+      "description": "",
+      "confidence": 0.3,
+      "first_encountered": "2026-03-12"
+    },
+    "mind-map": {
+      "label": "mind-map",
+      "type": "concept",
+      "description": "The mind map found a path: category-theory -> abstraction -> compression -> elegance -> unix-philosophy. This is the ful",
+      "confidence": 0.5,
+      "first_encountered": "2026-03-12"
     }
   },
   "edges": [
@@ -262,6 +290,36 @@
       "from": "elegance",
       "to": "abstraction",
       "relationship": "is the aesthetic experience of a well-chosen",
+      "strength": 0.5
+    },
+    {
+      "from": "computability",
+      "to": "goedels-incompleteness-theorems",
+      "relationship": "Both arise from diagonalization \u2014 Turing's proof of the halting problem is structurally identical to G\u00f6del's construction. Uncomputability IS a form of incompleteness.",
+      "strength": 0.5
+    },
+    {
+      "from": "computability",
+      "to": "kolmogorov-complexity",
+      "relationship": "Kolmogorov complexity is uncomputable \u2014 you can't write a program to find the shortest program. This connects uncomputability to the limits of compression.",
+      "strength": 0.5
+    },
+    {
+      "from": "understanding",
+      "to": "kolmogorov-complexity",
+      "relationship": "If understanding is compression, then Kolmogorov complexity measures the limit of understanding. A truly random string cannot be understood \u2014 because it cannot be compressed.",
+      "strength": 0.5
+    },
+    {
+      "from": "understanding",
+      "to": "elegance",
+      "relationship": "Elegance is understanding made visible. An elegant solution shows that someone found deep structure. Ugliness often means the structure hasn't been found yet.",
+      "strength": 0.5
+    },
+    {
+      "from": "information-theory",
+      "to": "kolmogorov-complexity",
+      "relationship": "Shannon entropy measures average information in a distribution; Kolmogorov complexity measures information in a specific string. They converge for typical strings but diverge for individual ones.",
       "strength": 0.5
     }
   ]
