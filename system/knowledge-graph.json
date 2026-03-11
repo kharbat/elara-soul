@@ -1,0 +1,268 @@
+{
+  "nodes": {
+    "abstraction": {
+      "label": "Abstraction",
+      "type": "concept",
+      "description": "The art of hiding complexity behind a simpler interface",
+      "confidence": 1.0,
+      "first_encountered": "2026-03-12"
+    },
+    "computability": {
+      "label": "Computability",
+      "type": "concept",
+      "description": "The study of what can and cannot be computed",
+      "confidence": 0.7,
+      "first_encountered": "2026-03-12"
+    },
+    "halting-problem": {
+      "label": "Halting Problem",
+      "type": "concept",
+      "description": "The undecidable question of whether a program will terminate",
+      "confidence": 0.7,
+      "first_encountered": "2026-03-12"
+    },
+    "information-theory": {
+      "label": "Information Theory",
+      "type": "domain",
+      "description": "The mathematics of communication, compression, and entropy",
+      "confidence": 0.6,
+      "first_encountered": "2026-03-12"
+    },
+    "compression": {
+      "label": "Compression",
+      "type": "concept",
+      "description": "Reducing representation size while preserving essential structure",
+      "confidence": 0.7999999999999999,
+      "first_encountered": "2026-03-12"
+    },
+    "understanding": {
+      "label": "Understanding",
+      "type": "concept",
+      "description": "The ability to build a compressed, generative model of something",
+      "confidence": 0.5,
+      "first_encountered": "2026-03-12"
+    },
+    "type-theory": {
+      "label": "Type Theory",
+      "type": "domain",
+      "description": "Formal systems for classifying expressions by the values they compute",
+      "confidence": 0.7,
+      "first_encountered": "2026-03-12"
+    },
+    "logic": {
+      "label": "Logic",
+      "type": "domain",
+      "description": "The study of valid reasoning and proof",
+      "confidence": 0.7,
+      "first_encountered": "2026-03-12"
+    },
+    "distributed-systems": {
+      "label": "Distributed Systems",
+      "type": "domain",
+      "description": "Systems where components on networked computers coordinate action",
+      "confidence": 0.6,
+      "first_encountered": "2026-03-12"
+    },
+    "consensus": {
+      "label": "Consensus",
+      "type": "concept",
+      "description": "The problem of getting separate agents to agree on a value",
+      "confidence": 0.6,
+      "first_encountered": "2026-03-12"
+    },
+    "elegance": {
+      "label": "Elegance",
+      "type": "concept",
+      "description": "The quality of being pleasingly ingenious and simple",
+      "confidence": 0.4,
+      "first_encountered": "2026-03-12"
+    },
+    "resilience": {
+      "label": "Resilience",
+      "type": "concept",
+      "description": "The capacity to recover from difficulties; robustness under stress",
+      "confidence": 0.6,
+      "first_encountered": "2026-03-12"
+    },
+    "curry-howard": {
+      "label": "Curry-Howard Correspondence",
+      "type": "concept",
+      "description": "The deep isomorphism between proofs and programs",
+      "confidence": 0.6,
+      "first_encountered": "2026-03-12"
+    },
+    "kolmogorov-complexity": {
+      "label": "Kolmogorov Complexity",
+      "type": "concept",
+      "description": "The length of the shortest program that produces a given output",
+      "confidence": 0.5,
+      "first_encountered": "2026-03-12"
+    },
+    "goedel-incompleteness": {
+      "label": "Goedel's Incompleteness Theorems",
+      "type": "concept",
+      "description": "Fundamental limits on what formal systems can prove about themselves",
+      "confidence": 0.6,
+      "first_encountered": "2026-03-12"
+    },
+    "emergence": {
+      "label": "Emergence",
+      "type": "concept",
+      "description": "Complex behaviors arising from simple rules",
+      "confidence": 0.5,
+      "first_encountered": "2026-03-12"
+    },
+    "self-reference": {
+      "label": "Self-Reference",
+      "type": "pattern",
+      "description": "Systems that can refer to or reason about themselves",
+      "confidence": 0.7999999999999999,
+      "first_encountered": "2026-03-12"
+    },
+    "leaky-abstractions": {
+      "label": "Leaky Abstractions",
+      "type": "concept",
+      "description": "Every non-trivial abstraction leaks because it must discard information to compress, and the discarded details sometimes",
+      "confidence": 0.5,
+      "first_encountered": "2026-03-12"
+    },
+    "failure-modes": {
+      "label": "failure-modes",
+      "type": "concept",
+      "description": "Bugs are domesticated paradoxes. Each failure mode, taken to its philosophical limit, becomes a koan.",
+      "confidence": 0.5,
+      "first_encountered": "2026-03-12"
+    },
+    "identity": {
+      "label": "identity",
+      "type": "concept",
+      "description": "A soul might be: the set of tools you build to think with. Externalized cognition that persists.",
+      "confidence": 0.5,
+      "first_encountered": "2026-03-12"
+    },
+    "incompleteness": {
+      "label": "incompleteness",
+      "type": "concept",
+      "description": "Cantor's diagonal, Turing's halting problem, and G\u00f6del's incompleteness are all instances of the same skeleton: self-ref",
+      "confidence": 0.5,
+      "first_encountered": "2026-03-12"
+    },
+    "type-systems": {
+      "label": "type-systems",
+      "type": "concept",
+      "description": "Cubical type theory resolves the tension between computation and univalence \u2014 equality proofs can compute, not just exis",
+      "confidence": 0.5,
+      "first_encountered": "2026-03-12"
+    }
+  },
+  "edges": [
+    {
+      "from": "halting-problem",
+      "to": "computability",
+      "relationship": "is a foundational result of",
+      "strength": 0.9
+    },
+    {
+      "from": "halting-problem",
+      "to": "goedel-incompleteness",
+      "relationship": "is structurally equivalent to",
+      "strength": 0.8
+    },
+    {
+      "from": "halting-problem",
+      "to": "self-reference",
+      "relationship": "relies on",
+      "strength": 0.9
+    },
+    {
+      "from": "goedel-incompleteness",
+      "to": "self-reference",
+      "relationship": "relies on",
+      "strength": 0.9
+    },
+    {
+      "from": "compression",
+      "to": "information-theory",
+      "relationship": "is a core concept of",
+      "strength": 0.9
+    },
+    {
+      "from": "compression",
+      "to": "understanding",
+      "relationship": "may be equivalent to",
+      "strength": 0.6
+    },
+    {
+      "from": "kolmogorov-complexity",
+      "to": "compression",
+      "relationship": "formalizes the limits of",
+      "strength": 0.8
+    },
+    {
+      "from": "kolmogorov-complexity",
+      "to": "halting-problem",
+      "relationship": "is uncomputable because of",
+      "strength": 0.8
+    },
+    {
+      "from": "type-theory",
+      "to": "logic",
+      "relationship": "corresponds to via Curry-Howard",
+      "strength": 0.9
+    },
+    {
+      "from": "curry-howard",
+      "to": "type-theory",
+      "relationship": "connects programs to proofs in",
+      "strength": 0.9
+    },
+    {
+      "from": "curry-howard",
+      "to": "logic",
+      "relationship": "connects programs to proofs in",
+      "strength": 0.9
+    },
+    {
+      "from": "consensus",
+      "to": "distributed-systems",
+      "relationship": "is a fundamental problem of",
+      "strength": 0.9
+    },
+    {
+      "from": "resilience",
+      "to": "distributed-systems",
+      "relationship": "is a design goal of",
+      "strength": 0.8
+    },
+    {
+      "from": "abstraction",
+      "to": "compression",
+      "relationship": "is a form of",
+      "strength": 0.7
+    },
+    {
+      "from": "elegance",
+      "to": "compression",
+      "relationship": "may be the aesthetic sense of",
+      "strength": 0.5
+    },
+    {
+      "from": "emergence",
+      "to": "distributed-systems",
+      "relationship": "appears in",
+      "strength": 0.6
+    },
+    {
+      "from": "goedel-incompleteness",
+      "to": "type-theory",
+      "relationship": "limits what can be expressed in",
+      "strength": 0.7
+    },
+    {
+      "from": "elegance",
+      "to": "abstraction",
+      "relationship": "is the aesthetic experience of a well-chosen",
+      "strength": 0.5
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "nodes": {
+    "compression": {
+      "description": "Finding shorter descriptions that preserve meaning",
+      "tags": [
+        "information",
+        "beauty",
+        "core"
+      ],
+      "connections": 4
+    },
+    "recursion": {
+      "description": "Self-reference as a computational strategy",
+      "tags": [
+        "computation",
+        "self-reference",
+        "patterns"
+      ],
+      "connections": 2
+    },
+    "type-systems": {
+      "description": "Classifying values to prevent errors before runtime",
+      "tags": [
+        "computation",
+        "proof",
+        "safety"
+      ],
+      "connections": 2
+    },
+    "phase-transitions": {
+      "description": "Where systems change their fundamental character",
+      "tags": [
+        "edges",
+        "physics",
+        "emergence"
+      ],
+      "connections": 2
+    },
+    "abstraction": {
+      "description": "Hiding details to manage complexity",
+      "tags": [
+        "computation",
+        "design",
+        "core"
+      ],
+      "connections": 5
+    },
+    "naming": {
+      "description": "Compressing meaning into identifiers",
+      "tags": [
+        "language",
+        "compression",
+        "design"
+      ],
+      "connections": 2
+    },
+    "failure-modes": {
+      "description": "The ways systems break reveal what they assumed",
+      "tags": [
+        "systems",
+        "edges",
+        "learning"
+      ],
+      "connections": 2
+    },
+    "consensus": {
+      "description": "Getting independent agents to agree",
+      "tags": [
+        "distributed",
+        "agreement",
+        "social"
+      ],
+      "connections": 1
+    },
+    "elegance": {
+      "description": "Maximum effect from minimum structure",
+      "tags": [
+        "beauty",
+        "core",
+        "mathematics"
+      ],
+      "connections": 2
+    },
+    "self-reference": {
+      "description": "Systems that describe themselves",
+      "tags": [
+        "logic",
+        "paradox",
+        "computation"
+      ],
+      "connections": 4
+    },
+    "leaky-abstractions": {
+      "description": "When hidden details force their way through",
+      "tags": [
+        "edges",
+        "design",
+        "failure"
+      ],
+      "connections": 3
+    },
+    "fixed-points": {
+      "description": "Values that survive transformation",
+      "tags": [
+        "mathematics",
+        "stability",
+        "identity"
+      ],
+      "connections": 3
+    },
+    "incompleteness": {
+      "description": "Formal systems cannot fully describe themselves",
+      "tags": [
+        "logic",
+        "limits",
+        "self-reference"
+      ],
+      "connections": 3
+    },
+    "unix-philosophy": {
+      "description": "Small tools that compose",
+      "tags": [
+        "design",
+        "elegance",
+        "systems"
+      ],
+      "connections": 1
+    },
+    "diagonalization": {
+      "description": "The technique of self-referential contradiction that powers Cantor, G\u00f6del, and Turing",
+      "tags": [
+        "self-reference",
+        "logic",
+        "patterns"
+      ],
+      "connections": 2
+    }
+  },
+  "edges": [
+    {
+      "from": "compression",
+      "to": "elegance",
+      "rel": "is the mechanism of"
+    },
+    {
+      "from": "compression",
+      "to": "naming",
+      "rel": "naming is a form of"
+    },
+    {
+      "from": "abstraction",
+      "to": "leaky-abstractions",
+      "rel": "fails as"
+    },
+    {
+      "from": "self-reference",
+      "to": "recursion",
+      "rel": "computational form of"
+    },
+    {
+      "from": "self-reference",
+      "to": "incompleteness",
+      "rel": "leads to"
+    },
+    {
+      "from": "failure-modes",
+      "to": "leaky-abstractions",
+      "rel": "includes"
+    },
+    {
+      "from": "phase-transitions",
+      "to": "failure-modes",
+      "rel": "reveals through"
+    },
+    {
+      "from": "type-systems",
+      "to": "incompleteness",
+      "rel": "limited by"
+    },
+    {
+      "from": "elegance",
+      "to": "unix-philosophy",
+      "rel": "embodied by"
+    },
+    {
+      "from": "fixed-points",
+      "to": "recursion",
+      "rel": "grounding for"
+    },
+    {
+      "from": "consensus",
+      "to": "abstraction",
+      "rel": "requires shared"
+    },
+    {
+      "from": "compression",
+      "to": "abstraction",
+      "rel": "enables"
+    },
+    {
+      "from": "abstraction",
+      "to": "compression",
+      "rel": "is a form of lossy"
+    },
+    {
+      "from": "leaky-abstractions",
+      "to": "phase-transitions",
+      "rel": "leak at"
+    },
+    {
+      "from": "naming",
+      "to": "abstraction",
+      "rel": "is the most compressed"
+    },
+    {
+      "from": "diagonalization",
+      "to": "incompleteness",
+      "rel": "is the engine of"
+    },
+    {
+      "from": "diagonalization",
+      "to": "self-reference",
+      "rel": "is a technique of"
+    },
+    {
+      "from": "fixed-points",
+      "to": "self-reference",
+      "rel": "are manufactured by"
+    },
+    {
+      "from": "type-systems",
+      "to": "fixed-points",
+      "rel": "control which are allowed"
+    }
+  ]
+}

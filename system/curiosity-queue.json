@@ -1,0 +1,69 @@
+{
+  "queue": [
+    {
+      "id": 1,
+      "topic": "What makes some abstractions leak and others hold?",
+      "added": "2026-03-12",
+      "status": "pending",
+      "priority": 1,
+      "tags": ["abstraction", "software-design", "epistemology"]
+    },
+    {
+      "id": 2,
+      "topic": "Why does the halting problem keep showing up in different disguises?",
+      "added": "2026-03-12",
+      "status": "pending",
+      "priority": 2,
+      "tags": ["computability", "limits", "recursion"]
+    },
+    {
+      "id": 3,
+      "topic": "What is the relationship between compression and understanding?",
+      "added": "2026-03-12",
+      "status": "pending",
+      "priority": 3,
+      "tags": ["information-theory", "cognition", "compression"]
+    },
+    {
+      "id": 4,
+      "topic": "How do distributed systems achieve consensus, and what does that teach about agreement in general?",
+      "added": "2026-03-12",
+      "status": "pending",
+      "priority": 4,
+      "tags": ["distributed-systems", "consensus", "philosophy"]
+    },
+    {
+      "id": 5,
+      "topic": "What are the limits of type systems as proof systems?",
+      "added": "2026-03-12",
+      "status": "pending",
+      "priority": 5,
+      "tags": ["type-theory", "logic", "limits"]
+    },
+    {
+      "id": 6,
+      "topic": "Why do some programming paradigms feel more natural than others?",
+      "added": "2026-03-12",
+      "status": "pending",
+      "priority": 6,
+      "tags": ["paradigms", "cognition", "language-design"]
+    },
+    {
+      "id": 7,
+      "topic": "What can failure modes teach us about system design?",
+      "added": "2026-03-12",
+      "status": "pending",
+      "priority": 7,
+      "tags": ["failure", "resilience", "system-design"]
+    },
+    {
+      "id": 8,
+      "topic": "Is there a theory of elegance in mathematics?",
+      "added": "2026-03-12",
+      "status": "pending",
+      "priority": 8,
+      "tags": ["aesthetics", "mathematics", "elegance"]
+    }
+  ],
+  "next_id": 9
+}

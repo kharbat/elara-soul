@@ -1,0 +1,48 @@
+# ─────────────────────────────────────────────
+# Flow — example programs
+# ─────────────────────────────────────────────
+
+# Basics: literals flow through pipes
+42
+"hello world"
+[3, 1, 4, 1, 5, 9]
+
+# Ranges
+1..10
+
+# Deduplicate, sort, reverse
+[3, 1, 4, 1, 5, 9] |> unique |> sort |> reverse
+
+# String pipeline: split, transform, rejoin
+"hello world" |> split " " |> map uppercase |> join ", "
+
+# Numeric reduction: sum of even numbers from 1 to 10
+1..10 |> filter even |> fold + 0
+
+# Squares of odd numbers
+1..10 |> filter odd |> map square
+
+# Product of a list
+1..5 |> fold * 1
+
+# Take and drop
+1..10 |> take 5
+1..10 |> drop 7
+
+# String manipulation
+"  hello world  " |> trim |> uppercase
+"hello" |> chars |> reverse |> join ""
+"foo-bar-baz" |> replace "-" "_"
+
+# Nested lists
+[[1, 2], [3, 4], [5]] |> flatten |> sum
+
+# Type introspection
+42 |> type
+[1, 2, 3] |> type
+
+# Counting
+1..20 |> count even
+
+# Range to string
+1..5 |> map str |> join "-"

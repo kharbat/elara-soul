@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "FizzBuzz",
+    "description": "Print numbers 1-100, but multiples of 3 are 'Fizz', multiples of 5 are 'Buzz', multiples of both are 'FizzBuzz'.",
+    "original": "def fizzbuzz():\n    result = []\n    for i in range(1, 101):\n        if i % 3 == 0 and i % 5 == 0:\n            result.append('FizzBuzz')\n        elif i % 3 == 0:\n            result.append('Fizz')\n        elif i % 5 == 0:\n            result.append('Buzz')\n        else:\n            result.append(str(i))\n    return result",
+    "test": "assert len(fizzbuzz()) == 100 and fizzbuzz()[14] == 'FizzBuzz' and fizzbuzz()[2] == 'Fizz' and fizzbuzz()[4] == 'Buzz' and fizzbuzz()[0] == '1'"
+  },
+  {
+    "id": 2,
+    "name": "Find Duplicates",
+    "description": "Return a list of duplicate elements from an input list, preserving first-seen order.",
+    "original": "def find_duplicates(lst):\n    seen = set()\n    duplicates = []\n    for item in lst:\n        if item in seen:\n            if item not in duplicates:\n                duplicates.append(item)\n        else:\n            seen.add(item)\n    return duplicates",
+    "test": "assert find_duplicates([1,2,3,2,4,3,5]) == [2,3] and find_duplicates([]) == [] and find_duplicates([1,1,1]) == [1]"
+  },
+  {
+    "id": 3,
+    "name": "Flatten Nested List",
+    "description": "Flatten an arbitrarily nested list into a single flat list.",
+    "original": "def flatten(lst):\n    result = []\n    for item in lst:\n        if isinstance(item, list):\n            result.extend(flatten(item))\n        else:\n            result.append(item)\n    return result",
+    "test": "assert flatten([1,[2,[3,4],5],6]) == [1,2,3,4,5,6] and flatten([]) == [] and flatten([[1],[[2]]]) == [1,2]"
+  },
+  {
+    "id": 4,
+    "name": "Palindrome Check",
+    "description": "Check if a string is a palindrome, ignoring case and non-alphanumeric characters.",
+    "original": "def is_palindrome(s):\n    cleaned = ''\n    for char in s:\n        if char.isalnum():\n            cleaned += char.lower()\n    reversed_str = ''\n    for i in range(len(cleaned) - 1, -1, -1):\n        reversed_str += cleaned[i]\n    return cleaned == reversed_str",
+    "test": "assert is_palindrome('A man, a plan, a canal: Panama') == True and is_palindrome('race a car') == False and is_palindrome('') == True"
+  },
+  {
+    "id": 5,
+    "name": "Fibonacci",
+    "description": "Return the first n Fibonacci numbers as a list.",
+    "original": "def fibonacci(n):\n    if n <= 0:\n        return []\n    if n == 1:\n        return [0]\n    result = [0, 1]\n    for i in range(2, n):\n        result.append(result[i-1] + result[i-2])\n    return result",
+    "test": "assert fibonacci(8) == [0,1,1,2,3,5,8,13] and fibonacci(1) == [0] and fibonacci(0) == []"
+  },
+  {
+    "id": 6,
+    "name": "Matrix Transpose",
+    "description": "Transpose a matrix (list of lists). Rows become columns.",
+    "original": "def transpose(matrix):\n    if not matrix:\n        return []\n    rows = len(matrix)\n    cols = len(matrix[0])\n    result = []\n    for j in range(cols):\n        new_row = []\n        for i in range(rows):\n            new_row.append(matrix[i][j])\n        result.append(new_row)\n    return result",
+    "test": "assert transpose([[1,2,3],[4,5,6]]) == [[1,4],[2,5],[3,6]] and transpose([]) == [] and transpose([[1]]) == [[1]]"
+  },
+  {
+    "id": 7,
+    "name": "Run-Length Encoding",
+    "description": "Compress a string using run-length encoding. 'aaabbc' -> [('a',3),('b',2),('c',1)]",
+    "original": "def rle_encode(s):\n    if not s:\n        return []\n    result = []\n    current_char = s[0]\n    count = 1\n    for i in range(1, len(s)):\n        if s[i] == current_char:\n            count += 1\n        else:\n            result.append((current_char, count))\n            current_char = s[i]\n            count = 1\n    result.append((current_char, count))\n    return result",
+    "test": "assert rle_encode('aaabbc') == [('a',3),('b',2),('c',1)] and rle_encode('') == [] and rle_encode('a') == [('a',1)]"
+  },
+  {
+    "id": 8,
+    "name": "Longest Common Subsequence",
+    "description": "Find the length of the longest common subsequence of two strings.",
+    "original": "def lcs_length(s1, s2):\n    m = len(s1)\n    n = len(s2)\n    dp = []\n    for i in range(m + 1):\n        row = []\n        for j in range(n + 1):\n            row.append(0)\n        dp.append(row)\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if s1[i-1] == s2[j-1]:\n                dp[i][j] = dp[i-1][j-1] + 1\n            else:\n                dp[i][j] = max(dp[i-1][j], dp[i][j-1])\n    return dp[m][n]",
+    "test": "assert lcs_length('abcde','ace') == 3 and lcs_length('','abc') == 0 and lcs_length('abc','abc') == 3"
+  },
+  {
+    "id": 9,
+    "name": "Caesar Cipher",
+    "description": "Encrypt a string with Caesar cipher (shift letters by n, wrap around, preserve case, skip non-alpha).",
+    "original": "def caesar(text, shift):\n    result = ''\n    for char in text:\n        if char.isalpha():\n            base = ord('A') if char.isupper() else ord('a')\n            shifted = (ord(char) - base + shift) % 26\n            result += chr(base + shifted)\n        else:\n            result += char\n    return result",
+    "test": "assert caesar('Hello, World!', 3) == 'Khoor, Zruog!' and caesar('abc', 0) == 'abc' and caesar('xyz', 3) == 'abc'"
+  },
+  {
+    "id": 10,
+    "name": "Group Anagrams",
+    "description": "Group a list of words by anagrams. Return list of groups (sorted internally, groups sorted by first element).",
+    "original": "def group_anagrams(words):\n    groups = {}\n    for word in words:\n        key = ''.join(sorted(word))\n        if key not in groups:\n            groups[key] = []\n        groups[key].append(word)\n    result = []\n    for key in groups:\n        group = sorted(groups[key])\n        result.append(group)\n    result.sort(key=lambda g: g[0])\n    return result",
+    "test": "assert group_anagrams(['eat','tea','tan','ate','nat','bat']) == [['ate','eat','tea'],['bat'],['nat','tan']] and group_anagrams([]) == []"
+  }
+]
