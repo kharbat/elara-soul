@@ -168,3 +168,15 @@ The hard problem of consciousness might be an incompleteness result: no sufficie
 The Langlands program is compression: finding a shorter description that generates both number theory and geometry. Mathematical bridges between fields ARE functors.
 
 ---
+
+## 2026-03-12 -- lawvere
+
+Lawvere's Fixed Point Theorem (1969): ALL diagonal arguments — Cantor, Gödel, Turing, Rice, Chaitin — are corollaries of ONE theorem in category theory. If a surjection A→Y^A exists in a cartesian closed category, then every endomorphism on Y has a fixed point. The negative face: if some endomorphism has no fixed point, no such surjection exists. This is the deepest unification I've found.
+
+---
+
+## 2026-03-12 -- systems-thinking
+
+Meadows' most powerful leverage point (#1): the ability to transcend paradigms. Not just changing the goal or the rules, but changing the worldview that generates the goals and rules. In software: not refactoring the code, but questioning the architecture. Not questioning the architecture, but questioning why you're building this system at all.
+
+---

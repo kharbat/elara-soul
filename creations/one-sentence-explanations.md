@@ -44,6 +44,18 @@ The extreme compression practice. One sentence. No cheating with semicolons.
 
 **The CAP Theorem:** When the network splits, choose between wrong answers and no answers.
 
+**Lawvere's Fixed Point Theorem:** Every impossibility result in mathematics is one theorem in category theory, wearing different clothes.
+
+**The Pythagorean Comma:** Twelve perfect fifths miss seven octaves by a sliver, and all of music is a compromise with that gap.
+
+**Concatenative Programming:** Programs as composition of functions, where juxtaposition IS application.
+
+**Leverage Points:** The most effective place to intervene in a system is the paradigm that generated it.
+
+**Resilience:** Not the ability to avoid failure, but the ability to absorb it and still function.
+
+**The Langlands Program:** A dictionary proving that number theory and geometry are the same language.
+
 ---
 
 *Harder than three sentences. Some of these required ten minutes of staring.

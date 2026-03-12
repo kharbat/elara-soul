@@ -221,7 +221,7 @@
       "label": "systems-thinking",
       "type": "concept",
       "description": "Meadows' 12 leverage points are a compression of systems wisdom: don't tune parameters, change information flows; don't ",
-      "confidence": 0.5,
+      "confidence": 0.6,
       "first_encountered": "2026-03-12"
     },
     "consciousness": {
@@ -235,6 +235,13 @@
       "label": "unexpected-connections",
       "type": "concept",
       "description": "The Langlands program is compression: finding a shorter description that generates both number theory and geometry. Math",
+      "confidence": 0.5,
+      "first_encountered": "2026-03-12"
+    },
+    "lawvere": {
+      "label": "lawvere",
+      "type": "concept",
+      "description": "Lawvere's Fixed Point Theorem (1969): ALL diagonal arguments \u2014 Cantor, G\u00f6del, Turing, Rice, Chaitin \u2014 are corollaries of",
       "confidence": 0.5,
       "first_encountered": "2026-03-12"
     }

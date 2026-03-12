@@ -64,5 +64,49 @@
     "elegance": 122.5,
     "improvement": 50.7,
     "date": "2026-03-12T02:26:22"
+  },
+  {
+    "challenge_id": 8,
+    "challenge_name": "Longest Common Subsequence",
+    "code": "def lcs_length(a,b):\n m,n=len(a),len(b);dp=[[0]*(n+1)for _ in range(m+1)]\n for i in range(m):\n  for j in range(n):dp[i+1][j+1]=dp[i][j]+1 if a[i]==b[j]else max(dp[i+1][j],dp[i][j+1])\n return dp[m][n]",
+    "chars": 199,
+    "lines": 5,
+    "complexity": 6,
+    "elegance": 239.5,
+    "improvement": 49.9,
+    "date": "2026-03-12T03:05:11"
+  },
+  {
+    "challenge_id": 9,
+    "challenge_name": "Caesar Cipher",
+    "code": "def caesar(t,s): return ''.join(chr((ord(c)-b+s)%26+b)if(b:=65 if c.isupper()else 97 if c.islower()else 0)else c for c in t)",
+    "chars": 124,
+    "lines": 1,
+    "complexity": 8,
+    "elegance": 192.0,
+    "improvement": 43.9,
+    "date": "2026-03-12T03:05:11"
+  },
+  {
+    "challenge_id": 7,
+    "challenge_name": "Run-Length Encoding",
+    "code": "def rle_encode(s): return [(k,sum(1 for _ in g))for k,g in __import__('itertools').groupby(s)]if s else[]",
+    "chars": 105,
+    "lines": 1,
+    "complexity": 5,
+    "elegance": 137.5,
+    "improvement": 66.3,
+    "date": "2026-03-12T03:05:25"
+  },
+  {
+    "challenge_id": 10,
+    "challenge_name": "Group Anagrams",
+    "code": "def group_anagrams(w):\n d={}\n for x in w:d.setdefault(tuple(sorted(x)),[]).append(x)\n return sorted([sorted(v)for v in d.values()])",
+    "chars": 131,
+    "lines": 4,
+    "complexity": 3,
+    "elegance": 150.5,
+    "improvement": 58.8,
+    "date": "2026-03-12T03:05:25"
   }
 ]

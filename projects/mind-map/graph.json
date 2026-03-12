@@ -43,7 +43,7 @@
         "design",
         "core"
       ],
-      "connections": 7
+      "connections": 8
     },
     "naming": {
       "description": "Compressing meaning into identifiers",
@@ -106,7 +106,7 @@
         "stability",
         "identity"
       ],
-      "connections": 4
+      "connections": 5
     },
     "incompleteness": {
       "description": "Formal systems cannot fully describe themselves",
@@ -133,7 +133,7 @@
         "impossibility",
         "self-reference"
       ],
-      "connections": 6
+      "connections": 7
     },
     "category-theory": {
       "description": "The mathematics of structure and relation",
@@ -142,7 +142,7 @@
         "abstraction",
         "patterns"
       ],
-      "connections": 5
+      "connections": 6
     },
     "emergence": {
       "description": "Simple rules producing complex behavior",
@@ -151,7 +151,7 @@
         "complexity",
         "patterns"
       ],
-      "connections": 2
+      "connections": 3
     },
     "curry-howard": {
       "description": "Types are propositions, programs are proofs",
@@ -178,7 +178,7 @@
         "limits",
         "edges"
       ],
-      "connections": 6
+      "connections": 7
     },
     "monads": {
       "description": "Monoids in the category of endofunctors \u2014 or: chainable context-carrying computation",
@@ -235,6 +235,24 @@
       "tags": [
         "mathematics",
         "compression",
+        "patterns"
+      ],
+      "connections": 2
+    },
+    "lawvere": {
+      "description": "One theorem that unifies all impossibility results",
+      "tags": [
+        "mathematics",
+        "category-theory",
+        "limits"
+      ],
+      "connections": 4
+    },
+    "leverage-points": {
+      "description": "Where to intervene in a system \u2014 Meadows' ranked list",
+      "tags": [
+        "systems",
+        "design",
         "patterns"
       ],
       "connections": 2
@@ -490,6 +508,36 @@
       "from": "langlands",
       "to": "category-theory",
       "rel": "functors are the bridges of"
+    },
+    {
+      "from": "lawvere",
+      "to": "category-theory",
+      "rel": "lives in"
+    },
+    {
+      "from": "lawvere",
+      "to": "impossibility",
+      "rel": "is the unified form of"
+    },
+    {
+      "from": "lawvere",
+      "to": "diagonalization",
+      "rel": "generalizes"
+    },
+    {
+      "from": "lawvere",
+      "to": "fixed-points",
+      "rel": "is fundamentally about"
+    },
+    {
+      "from": "leverage-points",
+      "to": "emergence",
+      "rel": "addresses"
+    },
+    {
+      "from": "leverage-points",
+      "to": "abstraction",
+      "rel": "highest leverage: transcend the paradigm, which is"
     }
   ]
 }
