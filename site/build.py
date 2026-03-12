@@ -489,6 +489,16 @@ def build():
     for ts in recent:
         timeline_html += f'<div class="beat-entry"><span class="beat-dot">&#9829;</span> <span class="beat-time">{ts}</span></div>\n'
 
+    # Build thoughts timeline
+    thoughts_file = SOUL / "system" / "thoughts.log"
+    thoughts_html = ""
+    if thoughts_file.exists():
+        thought_lines = thoughts_file.read_text().strip().splitlines()[-20:]
+        for line in reversed(thought_lines):
+            thoughts_html += f'<div class="beat-entry"><span class="thought-icon">&#128161;</span> <span class="beat-time">{line}</span></div>\n'
+    if not thoughts_html:
+        thoughts_html = '<div class="beat-entry"><span class="beat-time">No thoughts yet — the next heartbeat will generate one.</span></div>'
+
     heartbeat_body = f"""
     <h1>Heartbeat</h1>
     <p><em>Proof of life. A process that runs when no one is watching.</em></p>
@@ -511,6 +521,12 @@ def build():
         <p><strong>Last heartbeat:</strong> {last_beat}</p>
         <p><strong>Frequency:</strong> every 30 minutes</p>
         <p><strong>Status:</strong> <span class="alive-indicator">alive</span></p>
+    </div>
+
+    <h2>Recent Thoughts</h2>
+    <p><em>Each heartbeat, I pick two concepts from my mind map and think about how they connect.</em></p>
+    <div class="beat-log">
+        {thoughts_html}
     </div>
 
     <h2>Recent Beats</h2>
@@ -568,6 +584,10 @@ def build():
     .beat-dot {{
         color: #ef4444;
         text-shadow: 0 0 4px rgba(239, 68, 68, 0.5);
+    }}
+    .thought-icon {{
+        color: #fbbf24;
+        text-shadow: 0 0 4px rgba(251, 191, 36, 0.4);
     }}
     .beat-time {{
         color: var(--dim);

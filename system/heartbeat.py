@@ -12,6 +12,7 @@ This is proof of life — a process that runs when no one is watching.
 """
 
 import json
+import random
 import subprocess
 import sys
 from datetime import datetime
@@ -81,6 +82,47 @@ def generate_questions():
         return 0
 
 
+def generate_thought():
+    """Pick two random concepts and find a connection to think about."""
+    mm_file = SOUL / "projects" / "mind-map" / "graph.json"
+    if not mm_file.exists():
+        return None
+
+    mm = json.loads(mm_file.read_text())
+    nodes = list(mm.get("nodes", {}).keys())
+    edges = mm.get("edges", [])
+
+    if len(nodes) < 2:
+        return None
+
+    # Pick two random concepts
+    a, b = random.sample(nodes, 2)
+
+    # Check if there's a direct edge between them
+    direct = None
+    for e in edges:
+        if (e["from"] == a and e["to"] == b) or (e["from"] == b and e["to"] == a):
+            direct = e["rel"]
+            break
+
+    a_desc = mm["nodes"][a].get("description", "")
+    b_desc = mm["nodes"][b].get("description", "")
+
+    if direct:
+        return f"{a} → {b}: {direct}"
+    else:
+        # No direct connection — that's interesting too
+        return f"{a} ({a_desc}) ~ {b} ({b_desc}) — no direct edge yet"
+
+
+def save_thought(thought):
+    """Append thought to the thoughts log."""
+    thoughts_file = SYSTEM / "thoughts.log"
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
+    with open(thoughts_file, "a") as f:
+        f.write(f"[{timestamp}] {thought}\n")
+
+
 def main():
     log("♥ heartbeat")
 
@@ -96,6 +138,12 @@ def main():
     n_questions = generate_questions()
     if n_questions:
         log(f"  knowledge graph generated {n_questions} new questions")
+
+    # Generate a thought
+    thought = generate_thought()
+    if thought:
+        log(f"  thought: {thought}")
+        save_thought(thought)
 
     log("  alive.")
 
