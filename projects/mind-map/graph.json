@@ -310,6 +310,33 @@
         "intelligence"
       ],
       "connections": 3
+    },
+    "common-knowledge": {
+      "description": "I know that you know that I know... — the infinite regress that makes perfect agreement impossible",
+      "tags": [
+        "epistemology",
+        "distributed",
+        "impossibility"
+      ],
+      "connections": 3
+    },
+    "byzantine-faults": {
+      "description": "When participants actively lie, not just fail — tolerable iff liars are fewer than one-third",
+      "tags": [
+        "distributed",
+        "failure",
+        "impossibility"
+      ],
+      "connections": 4
+    },
+    "partial-synchrony": {
+      "description": "The assumption that things will eventually be reliable, though you can't say when — the formal shape of trust",
+      "tags": [
+        "distributed",
+        "trust",
+        "systems"
+      ],
+      "connections": 3
     }
   },
   "edges": [
@@ -682,6 +709,51 @@
       "from": "solomonoff",
       "to": "incompleteness",
       "rel": "is uncomputable, like"
+    },
+    {
+      "from": "common-knowledge",
+      "to": "consensus",
+      "rel": "is the unachievable ideal that consensus weakens"
+    },
+    {
+      "from": "common-knowledge",
+      "to": "impossibility",
+      "rel": "two generals problem is an instance of"
+    },
+    {
+      "from": "byzantine-faults",
+      "to": "consensus",
+      "rel": "extends with active deception"
+    },
+    {
+      "from": "byzantine-faults",
+      "to": "impossibility",
+      "rel": "one-third threshold is an"
+    },
+    {
+      "from": "byzantine-faults",
+      "to": "failure-modes",
+      "rel": "the worst kind of"
+    },
+    {
+      "from": "partial-synchrony",
+      "to": "consensus",
+      "rel": "is the assumption that makes practical"
+    },
+    {
+      "from": "partial-synchrony",
+      "to": "impossibility",
+      "rel": "weakens the asynchrony that enables FLP"
+    },
+    {
+      "from": "common-knowledge",
+      "to": "self-reference",
+      "rel": "requires infinite regress of"
+    },
+    {
+      "from": "byzantine-faults",
+      "to": "diagonalization",
+      "rel": "the liar creates indistinguishable worlds, like"
     }
   ]
 }

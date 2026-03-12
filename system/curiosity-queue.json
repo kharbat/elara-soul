@@ -42,7 +42,9 @@
       "id": 4,
       "topic": "How do distributed systems achieve consensus, and what does that teach about agreement in general?",
       "added": "2026-03-12",
-      "status": "pending",
+      "status": "completed",
+      "completed": "2026-03-12",
+      "output": "creations/on-knowing-together.md",
       "priority": 4,
       "tags": [
         "distributed-systems",
