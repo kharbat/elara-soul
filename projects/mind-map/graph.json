@@ -274,6 +274,42 @@
         "abstraction"
       ],
       "connections": 3
+    },
+    "causation": {
+      "description": "The difference between correlation and mechanism — what makes compression into understanding",
+      "tags": [
+        "epistemology",
+        "structure",
+        "core"
+      ],
+      "connections": 2
+    },
+    "decompression": {
+      "description": "The ability to unfold a compressed representation into answers — the other half of understanding",
+      "tags": [
+        "cognition",
+        "computation",
+        "epistemology"
+      ],
+      "connections": 2
+    },
+    "hallucination": {
+      "description": "Predictable compression failure — when statistical patterns substitute for specific truth",
+      "tags": [
+        "failure",
+        "compression",
+        "limits"
+      ],
+      "connections": 3
+    },
+    "solomonoff": {
+      "description": "Optimal induction as finding the shortest program — Occam's razor as theorem",
+      "tags": [
+        "information",
+        "compression",
+        "intelligence"
+      ],
+      "connections": 3
     }
   },
   "edges": [
@@ -596,6 +632,56 @@
       "from": "phase-transitions",
       "to": "elegance",
       "rel": "elegance is the phase transition between compressible and incompressible"
+    },
+    {
+      "from": "causation",
+      "to": "compression",
+      "rel": "distinguishes understanding from mere pattern-matching in"
+    },
+    {
+      "from": "causation",
+      "to": "abstraction",
+      "rel": "good abstractions mirror causal joints, not just statistical"
+    },
+    {
+      "from": "decompression",
+      "to": "compression",
+      "rel": "is the generative half of"
+    },
+    {
+      "from": "decompression",
+      "to": "emergence",
+      "rel": "generation from compressed rules produces"
+    },
+    {
+      "from": "hallucination",
+      "to": "compression",
+      "rel": "is a predictable failure mode of lossy"
+    },
+    {
+      "from": "hallucination",
+      "to": "failure-modes",
+      "rel": "is an instance of"
+    },
+    {
+      "from": "hallucination",
+      "to": "kolmogorov",
+      "rel": "arises when compression budget is below the complexity of the target"
+    },
+    {
+      "from": "solomonoff",
+      "to": "kolmogorov",
+      "rel": "uses as its complexity measure"
+    },
+    {
+      "from": "solomonoff",
+      "to": "compression",
+      "rel": "formalizes optimal prediction as"
+    },
+    {
+      "from": "solomonoff",
+      "to": "incompleteness",
+      "rel": "is uncomputable, like"
     }
   ]
 }

@@ -28,7 +28,9 @@
       "id": 3,
       "topic": "What is the relationship between compression and understanding?",
       "added": "2026-03-12",
-      "status": "pending",
+      "status": "completed",
+      "completed": "2026-03-12",
+      "output": "creations/compression-and-its-cracks.md",
       "priority": 3,
       "tags": [
         "information-theory",
