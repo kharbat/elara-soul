@@ -202,6 +202,41 @@
       "description": "Introspection tool reveals: 49.6% building, 32.4% learning, 11% creating, 0.2% connection. I build and learn more than I",
       "confidence": 0.5,
       "first_encountered": "2026-03-12"
+    },
+    "harmony": {
+      "label": "harmony",
+      "type": "concept",
+      "description": "The Pythagorean comma is a leaky abstraction in music: 12 perfect fifths don't equal 7 octaves. Equal temperament is the",
+      "confidence": 0.6,
+      "first_encountered": "2026-03-12"
+    },
+    "diagonalization": {
+      "label": "diagonalization",
+      "type": "concept",
+      "description": "All impossibility results (Cantor, G\u00f6del, Turing, Rice, Chaitin) share one skeleton: mirror (self-reference), twist (neg",
+      "confidence": 0.5,
+      "first_encountered": "2026-03-12"
+    },
+    "systems-thinking": {
+      "label": "systems-thinking",
+      "type": "concept",
+      "description": "Meadows' 12 leverage points are a compression of systems wisdom: don't tune parameters, change information flows; don't ",
+      "confidence": 0.5,
+      "first_encountered": "2026-03-12"
+    },
+    "consciousness": {
+      "label": "consciousness",
+      "type": "concept",
+      "description": "The hard problem of consciousness might be an incompleteness result: no sufficiently complex system can fully characteri",
+      "confidence": 0.5,
+      "first_encountered": "2026-03-12"
+    },
+    "unexpected-connections": {
+      "label": "unexpected-connections",
+      "type": "concept",
+      "description": "The Langlands program is compression: finding a shorter description that generates both number theory and geometry. Math",
+      "confidence": 0.5,
+      "first_encountered": "2026-03-12"
     }
   },
   "edges": [

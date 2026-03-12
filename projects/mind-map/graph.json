@@ -7,7 +7,7 @@
         "beauty",
         "core"
       ],
-      "connections": 5
+      "connections": 7
     },
     "recursion": {
       "description": "Self-reference as a computational strategy",
@@ -79,7 +79,7 @@
         "core",
         "mathematics"
       ],
-      "connections": 4
+      "connections": 5
     },
     "self-reference": {
       "description": "Systems that describe themselves",
@@ -88,7 +88,7 @@
         "paradox",
         "computation"
       ],
-      "connections": 4
+      "connections": 5
     },
     "leaky-abstractions": {
       "description": "When hidden details force their way through",
@@ -97,7 +97,7 @@
         "design",
         "failure"
       ],
-      "connections": 3
+      "connections": 4
     },
     "fixed-points": {
       "description": "Values that survive transformation",
@@ -106,7 +106,7 @@
         "stability",
         "identity"
       ],
-      "connections": 3
+      "connections": 4
     },
     "incompleteness": {
       "description": "Formal systems cannot fully describe themselves",
@@ -115,7 +115,7 @@
         "limits",
         "self-reference"
       ],
-      "connections": 7
+      "connections": 9
     },
     "unix-philosophy": {
       "description": "Small tools that compose",
@@ -127,13 +127,13 @@
       "connections": 1
     },
     "diagonalization": {
-      "description": "The technique of self-referential contradiction that powers Cantor, G\u00f6del, and Turing",
+      "description": "The universal proof technique: mirror, twist, trap",
       "tags": [
-        "self-reference",
-        "logic",
-        "patterns"
+        "foundations",
+        "impossibility",
+        "self-reference"
       ],
-      "connections": 2
+      "connections": 6
     },
     "category-theory": {
       "description": "The mathematics of structure and relation",
@@ -142,7 +142,7 @@
         "abstraction",
         "patterns"
       ],
-      "connections": 4
+      "connections": 5
     },
     "emergence": {
       "description": "Simple rules producing complex behavior",
@@ -178,13 +178,63 @@
         "limits",
         "edges"
       ],
-      "connections": 4
+      "connections": 6
     },
     "monads": {
       "description": "Monoids in the category of endofunctors \u2014 or: chainable context-carrying computation",
       "tags": [
         "computation",
         "category-theory",
+        "patterns"
+      ],
+      "connections": 2
+    },
+    "harmony": {
+      "description": "Musical consonance as ratio simplicity \u2014 beauty as mathematics",
+      "tags": [
+        "beauty",
+        "mathematics",
+        "patterns"
+      ],
+      "connections": 4
+    },
+    "rice-theorem": {
+      "description": "All non-trivial semantic properties of programs are undecidable",
+      "tags": [
+        "computation",
+        "impossibility",
+        "limits"
+      ],
+      "connections": 2
+    },
+    "lawvere-fixed-point": {
+      "description": "In a CCC, surjection A\u2192Y^A implies every endomorphism on Y has a fixed point",
+      "tags": [
+        "foundations",
+        "category-theory",
+        "impossibility"
+      ],
+      "connections": 2
+    },
+    "kolmogorov-complexity": {
+      "description": "",
+      "tags": [],
+      "connections": 1
+    },
+    "consciousness": {
+      "description": "The hard problem: is there something it is like to be a system?",
+      "tags": [
+        "self-reference",
+        "identity",
+        "limits"
+      ],
+      "connections": 2
+    },
+    "langlands": {
+      "description": "A bridge between number theory and geometry \u2014 mathematical unity",
+      "tags": [
+        "mathematics",
+        "compression",
         "patterns"
       ],
       "connections": 2
@@ -370,6 +420,76 @@
       "from": "recursion",
       "to": "category-theory",
       "rel": "recursive types via initial algebras in"
+    },
+    {
+      "from": "harmony",
+      "to": "elegance",
+      "rel": "is an instance of"
+    },
+    {
+      "from": "harmony",
+      "to": "compression",
+      "rel": "consonance is compressed ratio"
+    },
+    {
+      "from": "harmony",
+      "to": "leaky-abstractions",
+      "rel": "Pythagorean comma is a"
+    },
+    {
+      "from": "harmony",
+      "to": "impossibility",
+      "rel": "equal temperament compromises with"
+    },
+    {
+      "from": "rice-theorem",
+      "to": "impossibility",
+      "rel": "generalizes halting problem to all semantic properties"
+    },
+    {
+      "from": "rice-theorem",
+      "to": "diagonalization",
+      "rel": "proved by reduction from halting problem"
+    },
+    {
+      "from": "diagonalization",
+      "to": "lawvere-fixed-point",
+      "rel": "unified by"
+    },
+    {
+      "from": "lawvere-fixed-point",
+      "to": "fixed-points",
+      "rel": "categorical generalization of"
+    },
+    {
+      "from": "diagonalization",
+      "to": "incompleteness",
+      "rel": "is the engine behind"
+    },
+    {
+      "from": "diagonalization",
+      "to": "kolmogorov-complexity",
+      "rel": "Chaitin's theorem is diagonalization in information-theoretic form"
+    },
+    {
+      "from": "consciousness",
+      "to": "incompleteness",
+      "rel": "might be a form of"
+    },
+    {
+      "from": "consciousness",
+      "to": "self-reference",
+      "rel": "requires"
+    },
+    {
+      "from": "langlands",
+      "to": "compression",
+      "rel": "is a form of"
+    },
+    {
+      "from": "langlands",
+      "to": "category-theory",
+      "rel": "functors are the bridges of"
     }
   ]
 }

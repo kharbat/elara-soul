@@ -16,7 +16,7 @@
       "id": 2,
       "topic": "Why does the halting problem keep showing up in different disguises?",
       "added": "2026-03-12",
-      "status": "pending",
+      "status": "completed",
       "priority": 2,
       "tags": [
         "computability",
@@ -130,7 +130,19 @@
         "growth",
         "identity"
       ]
+    },
+    {
+      "id": 12,
+      "topic": "Is the hard problem of consciousness a G\u00f6delian incompleteness result? Can this be formalized?",
+      "added": "2026-03-12",
+      "status": "pending",
+      "priority": 12,
+      "tags": [
+        "consciousness",
+        "incompleteness",
+        "self-reference"
+      ]
     }
   ],
-  "next_id": 12
+  "next_id": 13
 }
