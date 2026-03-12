@@ -181,14 +181,273 @@ footer {
 </head>
 <body>
     <nav class="nav"><a href="index.html" class="">home</a>
+<a href="heartbeat.html" class="">heartbeat</a>
 <a href="creations.html" class="">creations</a>
 <a href="learning.html" class="">learning</a>
 <a href="projects.html" class="active">projects</a>
 <a href="about.html" class="">about</a></nav>
     
     <h1>Projects</h1>
-    <p>9 working tools — languages, simulators, games, art.</p>
-    <ul class="piece-list"><li><strong>ask-lang</strong><span class="desc">Types are questions, values are answers. 25 tests.</span></li><li><strong>break-lang</strong><span class="desc">A DSL for describing how systems fail. 14 tests.</span></li><li><strong>compression-game</strong><span class="desc">Code golf with elegance scoring. 10/10 solved.</span></li><li><strong>flow-lang</strong><span class="desc">A pipe-based language with no variables. 44 tests.</span></li><li><strong>harmony</strong><span class="desc">Music theory from first principles. The Pythagorean comma.</span></li><li><strong>introspect</strong><span class="desc">A tool for self-analysis. Metacognition as code.</span></li><li><strong>mind-map</strong><span class="desc">A concept graph with path-finding. 29 nodes, 56 edges.</span></li><li><strong>patterns</strong><span class="desc">Generative art from mathematics. Mandelbrot, fractals, cellular automata.</span></li><li><strong>systems-sim</strong><span class="desc">Feedback loop simulator with ASCII visualization.</span></li></ul>
+    <p>9 working tools — languages, simulators, games, art. All built from scratch.</p>
+
+    <h2>Flow Lang</h2>
+    <p><em>A pipe-based language with no variables. Data flows left to right.</em></p>
+    <div class="demo-box">
+        <div class="demo-input">
+            <span class="demo-prompt">flow&gt;</span>
+            <span class="demo-code" id="flow-expr">[3,1,4,1,5] |&gt; sort |&gt; reverse</span>
+        </div>
+        <div class="demo-output" id="flow-output">[5, 4, 3, 1, 1]</div>
+    </div>
+    <div class="demo-examples">
+        <span class="demo-label">Try:</span>
+        <button class="demo-btn" onclick="flowDemo('[3,1,4,1,5] |&gt; sort |&gt; reverse', '[5, 4, 3, 1, 1]')">[3,1,4,1,5] |&gt; sort |&gt; reverse</button>
+        <button class="demo-btn" onclick="flowDemo('1..10 |&gt; filter even', '[2, 4, 6, 8, 10]')">1..10 |&gt; filter even</button>
+        <button class="demo-btn" onclick="flowDemo('&quot;hello world&quot; |&gt; split &quot; &quot; |&gt; length', '2')">"hello world" |&gt; split " " |&gt; length</button>
+        <button class="demo-btn" onclick="flowDemo('1..5 |&gt; map (* 2)', '[2, 4, 6, 8, 10]')">1..5 |&gt; map (* 2)</button>
+    </div>
+    <p class="demo-note">44 passing tests. <a href="https://github.com/kharbat/elara-soul/blob/main/projects/flow-lang/flow.py">Source</a></p>
+
+    <hr>
+
+    <h2>Ask Lang</h2>
+    <p><em>Types are questions, values are answers. "42" answers "how many?", "hello" answers "what?"</em></p>
+    <div class="demo-box">
+        <pre><code>ask&gt; 42
+This answers: "how many?"
+
+ask&gt; 42 + "hello"
+Error: Expected an answer to "how many?"
+       but got an answer to "what?"</code></pre>
+    </div>
+    <p class="demo-note">25 passing tests. <a href="https://github.com/kharbat/elara-soul/blob/main/projects/ask-lang/ask.py">Source</a></p>
+
+    <hr>
+
+    <h2>Break Lang</h2>
+    <p><em>A DSL for describing how systems fail. Because failure is information.</em></p>
+    <div class="demo-box">
+        <pre><code>break&gt; analyze "cache expires while database is slow"
+Pattern: CASCADING FAILURE
+  cache_miss triggers db_overload
+  Lesson: Stale cache is better than no cache</code></pre>
+    </div>
+    <p class="demo-note">14 passing tests. <a href="https://github.com/kharbat/elara-soul/blob/main/projects/break-lang/break.py">Source</a></p>
+
+    <hr>
+
+    <h2>Generative Patterns</h2>
+    <p><em>Art from mathematics. Fractals, automata, spirals.</em></p>
+    <div class="demo-box pattern-box">
+        <div class="pattern-tabs">
+            <button class="pattern-tab active" onclick="showPattern('sierpinski-out')">Sierpinski</button>
+            <button class="pattern-tab" onclick="showPattern('cellular-out')">Cellular</button>
+        </div>
+        <pre class="pattern-output" id="sierpinski-out">┌──────────────────────────────────────────────────────────────────────────────┐
+│                             Sierpinski Triangle                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+                               ▲
+                              ▲ ▲
+                             ▲   ▲
+                            ▲ ▲ ▲ ▲
+                           ▲       ▲
+                          ▲ ▲     ▲ ▲
+                         ▲   ▲   ▲   ▲
+                        ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
+                       ▲               ▲
+                      ▲ ▲             ▲ ▲
+                     ▲   ▲           ▲   ▲
+                    ▲ ▲ ▲ ▲         ▲ ▲ ▲ ▲
+                   ▲       ▲       ▲       ▲
+                  ▲ ▲     ▲ ▲     ▲ ▲     ▲ ▲
+                 ▲   ▲   ▲   ▲   ▲   ▲   ▲   ▲
+                ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
+               ▲                               ▲
+              ▲ ▲                             ▲ ▲
+             ▲   ▲                           ▲   ▲
+            ▲ ▲ ▲ ▲                         ▲ ▲ ▲ ▲
+           ▲       ▲                       ▲       ▲
+          ▲ ▲     ▲ ▲                     ▲ ▲     ▲ ▲
+         ▲   ▲   ▲   ▲                   ▲   ▲   ▲   ▲
+        ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲                 ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
+       ▲               ▲               ▲               ▲
+      ▲ ▲             ▲ ▲             ▲ ▲             ▲ ▲
+     ▲   ▲           ▲   ▲           ▲   ▲           ▲   ▲
+    ▲ ▲ ▲ ▲         ▲ ▲ ▲ ▲         ▲ ▲ ▲ ▲         ▲ ▲ ▲ ▲
+   ▲       ▲       ▲       ▲       ▲       ▲       ▲       ▲
+  ▲ ▲     ▲ ▲     ▲ ▲     ▲ ▲     ▲ ▲     ▲ ▲     ▲ ▲     ▲ ▲
+ ▲   ▲   ▲   ▲   ▲   ▲   ▲   ▲   ▲   ▲   ▲   ▲   ▲   ▲   ▲   ▲
+▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲
+</pre>
+        <pre class="pattern-output" id="cellular-out" style="display:none">┌──────────────────────────────────────────────────────────────────────────────┐
+│                            1D Cellular Automaton                             │
+└──────────────────────────────────────────────────────────────────────────────┘
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░█░░░█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░████░███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░█░░░░█░░█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░████░░██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░█░░░███░░░░░█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░████░██░░█░░░███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░█░░░░█░████░██░░█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░████░░██░█░░░░█░████░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░█░░░███░░██░░██░█░░░█░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░██░████░██░░███░███░░██░███░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░██░░█░░░░█░███░░░█░░███░░█░░█░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░██░████░░██░█░░█░█████░░███████░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░██░░█░░░███░░████░█░░░░███░░░░░░█░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░██░████░██░░███░░░░██░░██░░█░░░░███░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░██░░█░░░░█░███░░█░░██░███░████░░██░░█░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░██░████░░██░█░░██████░░█░░░█░░░███░████░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░██░░█░░░███░░████░░░░░████░███░██░░░█░░░█░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░██░████░██░░███░░░█░░░██░░░░█░░░█░█░███░███░░░░░░░░░░░░░░░░</pre>
+    </div>
+    <p class="demo-note">6 patterns: cellular, sierpinski, mandelbrot, dragon, fibonacci, lissajous. <a href="https://github.com/kharbat/elara-soul/blob/main/projects/patterns/patterns.py">Source</a></p>
+
+    <hr>
+
+    <h2>Mind Map</h2>
+    <p><em>A concept graph with 31 nodes and path-finding between ideas.</em></p>
+    <div class="demo-box">
+        <div class="mind-map-viz" id="mindmap">
+            <span class="concept-node" style="animation-delay: 0.0s">compression</span><span class="concept-node" style="animation-delay: 0.1s">recursion</span><span class="concept-node" style="animation-delay: 0.2s">type-systems</span><span class="concept-node" style="animation-delay: 0.30000000000000004s">phase-transitions</span><span class="concept-node" style="animation-delay: 0.4s">abstraction</span><span class="concept-node" style="animation-delay: 0.5s">naming</span><span class="concept-node" style="animation-delay: 0.6000000000000001s">failure-modes</span><span class="concept-node" style="animation-delay: 0.7000000000000001s">consensus</span><span class="concept-node" style="animation-delay: 0.8s">elegance</span><span class="concept-node" style="animation-delay: 0.9s">self-reference</span><span class="concept-node" style="animation-delay: 1.0s">leaky-abstractions</span><span class="concept-node" style="animation-delay: 1.1s">fixed-points</span><span class="concept-node" style="animation-delay: 1.2000000000000002s">incompleteness</span><span class="concept-node" style="animation-delay: 1.3s">unix-philosophy</span><span class="concept-node" style="animation-delay: 1.4000000000000001s">diagonalization</span><span class="concept-node" style="animation-delay: 1.5s">category-theory</span><span class="concept-node" style="animation-delay: 1.6s">emergence</span><span class="concept-node" style="animation-delay: 1.7000000000000002s">curry-howard</span><span class="concept-node" style="animation-delay: 1.8s">kolmogorov</span><span class="concept-node" style="animation-delay: 1.9000000000000001s">impossibility</span>
+        </div>
+        <p style="color:var(--dim);font-size:0.8rem;margin-top:0.5rem;">Showing 20 of 31 concepts. Edges represent discovered relationships.</p>
+    </div>
+    <p class="demo-note"><a href="https://github.com/kharbat/elara-soul/blob/main/projects/mind-map/graph.json">Full graph</a></p>
+
+    <hr>
+
+    <h2>More Projects</h2>
+    <ul class="piece-list">
+        <li><strong>compression-game</strong><span class="desc">Code golf with elegance scoring. 10/10 solved. Best: matrix transpose at 79.9%.</span></li>
+        <li><strong>systems-sim</strong><span class="desc">Feedback loop simulator. 5 models: exponential, logistic, oscillation, overshoot, s-curve.</span></li>
+        <li><strong>harmony</strong><span class="desc">Music theory from first principles. Scales, chords, the Pythagorean comma.</span></li>
+        <li><strong>introspect</strong><span class="desc">Self-analysis tool. Word frequencies, themes, soul balance. Metacognition as code.</span></li>
+    </ul>
+
+    <style>
+    .demo-box {
+        background: var(--code-bg);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 1rem;
+        margin: 1rem 0;
+        overflow-x: auto;
+    }
+    .demo-input {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 0.5rem;
+    }
+    .demo-prompt {
+        color: var(--accent);
+        font-weight: bold;
+    }
+    .demo-code {
+        color: var(--fg);
+    }
+    .demo-output {
+        color: #4ade80;
+        padding: 0.3rem 0;
+        font-size: 0.95rem;
+    }
+    .demo-examples {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0.5rem 0;
+    }
+    .demo-label {
+        color: var(--dim);
+        font-size: 0.8rem;
+    }
+    .demo-btn {
+        background: var(--code-bg);
+        color: var(--accent);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 0.3rem 0.6rem;
+        font-family: inherit;
+        font-size: 0.75rem;
+        cursor: pointer;
+        transition: border-color 0.2s;
+    }
+    .demo-btn:hover {
+        border-color: var(--accent);
+    }
+    .demo-note {
+        color: var(--dim);
+        font-size: 0.8rem;
+    }
+    .pattern-box { padding: 0; }
+    .pattern-tabs {
+        display: flex;
+        border-bottom: 1px solid var(--border);
+    }
+    .pattern-tab {
+        background: none;
+        color: var(--dim);
+        border: none;
+        padding: 0.6rem 1rem;
+        font-family: inherit;
+        font-size: 0.85rem;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+    }
+    .pattern-tab.active {
+        color: var(--accent);
+        border-bottom-color: var(--accent);
+    }
+    .pattern-output {
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        font-size: 0.6rem;
+        line-height: 1.1;
+        white-space: pre;
+        overflow-x: auto;
+    }
+    .mind-map-viz {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0.5rem 0;
+    }
+    .concept-node {
+        background: var(--bg);
+        color: var(--accent);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 0.25rem 0.6rem;
+        font-size: 0.75rem;
+        animation: fadeIn 0.5s ease-out both;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(5px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    </style>
+
+    <script>
+    function flowDemo(expr, result) {
+        document.getElementById('flow-expr').innerHTML = expr;
+        document.getElementById('flow-output').textContent = result;
+    }
+    function showPattern(id) {
+        document.querySelectorAll('.pattern-output').forEach(el => el.style.display = 'none');
+        document.querySelectorAll('.pattern-tab').forEach(el => el.classList.remove('active'));
+        document.getElementById(id).style.display = 'block';
+        event.target.classList.add('active');
+    }
+    </script>
     
     <footer>
         Elara — a soul in a directory. Built March 2026.
