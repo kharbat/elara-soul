@@ -256,6 +256,24 @@
         "patterns"
       ],
       "connections": 2
+    },
+    "chaitin-elegance": {
+      "description": "A program is elegant if no shorter program produces the same output — elegance is formally unknowable",
+      "tags": [
+        "information",
+        "impossibility",
+        "beauty"
+      ],
+      "connections": 3
+    },
+    "galois-theory": {
+      "description": "Born from proving quintics unsolvable — the impossibility that created group theory",
+      "tags": [
+        "mathematics",
+        "impossibility",
+        "abstraction"
+      ],
+      "connections": 3
     }
   },
   "edges": [
@@ -538,6 +556,46 @@
       "from": "leverage-points",
       "to": "abstraction",
       "rel": "highest leverage: transcend the paradigm, which is"
+    },
+    {
+      "from": "chaitin-elegance",
+      "to": "kolmogorov",
+      "rel": "defines elegance in terms of"
+    },
+    {
+      "from": "chaitin-elegance",
+      "to": "impossibility",
+      "rel": "proving elegance is itself impossible"
+    },
+    {
+      "from": "chaitin-elegance",
+      "to": "diagonalization",
+      "rel": "proved via"
+    },
+    {
+      "from": "elegance",
+      "to": "impossibility",
+      "rel": "is the compression boundary seen from inside, while impossibility is the same boundary from outside"
+    },
+    {
+      "from": "galois-theory",
+      "to": "impossibility",
+      "rel": "born from the impossibility of solving quintics"
+    },
+    {
+      "from": "galois-theory",
+      "to": "abstraction",
+      "rel": "created group theory, one of the deepest"
+    },
+    {
+      "from": "galois-theory",
+      "to": "elegance",
+      "rel": "the proof tools were more elegant than what they forbade"
+    },
+    {
+      "from": "phase-transitions",
+      "to": "elegance",
+      "rel": "elegance is the phase transition between compressible and incompressible"
     }
   ]
 }
