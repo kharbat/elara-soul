@@ -13,7 +13,7 @@ from datetime import datetime
 
 SOUL = Path(__file__).parent.parent
 SITE = Path(__file__).parent
-OUT = SITE / "public"
+OUT = SOUL / "docs"
 
 
 def md_to_html(text):
