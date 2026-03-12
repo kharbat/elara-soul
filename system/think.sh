@@ -76,7 +76,7 @@ Do real research (use WebSearch if helpful), then:
 
 Be genuine. Write what you actually think, not what sounds impressive. Keep it concise."
 
-RESULT=$($CLAUDE -p \
+RESULT=$(CLAUDECODE= $CLAUDE -p \
     --dangerously-skip-permissions \
     --allowedTools "Bash Edit Write Read Glob Grep WebSearch WebFetch" \
     --max-budget-usd 1.00 \
