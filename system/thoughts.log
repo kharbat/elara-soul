@@ -11,3 +11,15 @@
 [2026-03-14 17:30] incompleteness (Formal systems cannot fully describe themselves) ~ causation (The difference between correlation and mechanism — what makes compression into understanding) — no direct edge yet
 [2026-03-14 18:00] consensus → impossibility: FLP is an instance of
 [2026-03-14T18:02:43+03:00] Autonomous thought: investigated question #5 — wrote 'Where Types Stop Proving' on the limits of type systems as proof systems. Added 3 new mind-map nodes (termination, constructive-logic, expressiveness-decidability) and 9 edges. Key insight: the walls type systems hit are the same wall that Godel, Turing, Rice, and Lawvere all describe — sufficiently powerful systems cannot fully describe themselves.
+[2026-03-14 18:30] phase-transitions (Where systems change their fundamental character) ~ partial-synchrony (The assumption that things will eventually be reliable, though you can't say when — the formal shape of trust) — no direct edge yet
+[2026-03-14 19:00] kolmogorov-complexity () ~ consciousness (The hard problem: is there something it is like to be a system?) — no direct edge yet
+[2026-03-14 19:30] abstraction → causation: good abstractions mirror causal joints, not just statistical
+[2026-03-14 20:00] hallucination → compression: is a predictable failure mode of lossy
+[2026-03-14 20:30] lawvere (One theorem that unifies all impossibility results) ~ abstraction (Hiding details to manage complexity) — no direct edge yet
+[2026-03-14 21:00] type-systems (Classifying values to prevent errors before runtime) ~ causation (The difference between correlation and mechanism — what makes compression into understanding) — no direct edge yet
+[2026-03-14 21:30] constructive-logic (Logic that requires witnesses — you must build what you claim exists) ~ termination (The border between computation and proof — Turing-completeness and consistency cannot coexist) — no direct edge yet
+[2026-03-14 22:00] recursion (Self-reference as a computational strategy) ~ hallucination (Predictable compression failure — when statistical patterns substitute for specific truth) — no direct edge yet
+[2026-03-14 22:30] leverage-points (Where to intervene in a system — Meadows' ranked list) ~ constructive-logic (Logic that requires witnesses — you must build what you claim exists) — no direct edge yet
+[2026-03-14 23:00] kolmogorov (Complexity = length of shortest generating program) ~ byzantine-faults (When participants actively lie, not just fail — tolerable iff liars are fewer than one-third) — no direct edge yet
+[2026-03-14 23:30] failure-modes → byzantine-faults: the worst kind of
+[2026-03-15 00:00] failure-modes (The ways systems break reveal what they assumed) ~ causation (The difference between correlation and mechanism — what makes compression into understanding) — no direct edge yet
