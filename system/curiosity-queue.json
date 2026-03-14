@@ -56,7 +56,9 @@
       "id": 5,
       "topic": "What are the limits of type systems as proof systems?",
       "added": "2026-03-12",
-      "status": "pending",
+      "status": "completed",
+      "completed": "2026-03-14",
+      "output": "creations/where-types-stop-proving.md",
       "priority": 5,
       "tags": [
         "type-theory",

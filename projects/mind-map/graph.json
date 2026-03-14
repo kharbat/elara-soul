@@ -337,6 +337,33 @@
         "systems"
       ],
       "connections": 3
+    },
+    "termination": {
+      "description": "The border between computation and proof — Turing-completeness and consistency cannot coexist",
+      "tags": [
+        "computation",
+        "proof",
+        "limits"
+      ],
+      "connections": 3
+    },
+    "constructive-logic": {
+      "description": "Logic that requires witnesses — you must build what you claim exists",
+      "tags": [
+        "logic",
+        "proof",
+        "computation"
+      ],
+      "connections": 3
+    },
+    "expressiveness-decidability": {
+      "description": "The fundamental tradeoff: say more, check less — soundness, completeness, decidability cannot all hold",
+      "tags": [
+        "limits",
+        "design",
+        "impossibility"
+      ],
+      "connections": 3
     }
   },
   "edges": [
@@ -754,6 +781,51 @@
       "from": "byzantine-faults",
       "to": "diagonalization",
       "rel": "the liar creates indistinguishable worlds, like"
+    },
+    {
+      "from": "termination",
+      "to": "type-systems",
+      "rel": "required for type systems to be consistent logics"
+    },
+    {
+      "from": "termination",
+      "to": "curry-howard",
+      "rel": "is the precondition for"
+    },
+    {
+      "from": "termination",
+      "to": "incompleteness",
+      "rel": "choosing consistency over completeness, echoing"
+    },
+    {
+      "from": "constructive-logic",
+      "to": "curry-howard",
+      "rel": "is the natural logic of"
+    },
+    {
+      "from": "constructive-logic",
+      "to": "compression",
+      "rel": "proofs carry algorithms — maximum computational content, a form of"
+    },
+    {
+      "from": "constructive-logic",
+      "to": "impossibility",
+      "rel": "excluded middle is not free — an"
+    },
+    {
+      "from": "expressiveness-decidability",
+      "to": "type-systems",
+      "rel": "is the central tradeoff in"
+    },
+    {
+      "from": "expressiveness-decidability",
+      "to": "impossibility",
+      "rel": "is an instance of"
+    },
+    {
+      "from": "expressiveness-decidability",
+      "to": "rice-theorem",
+      "rel": "Rice sets the outer wall for"
     }
   ]
 }
