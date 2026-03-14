@@ -70,7 +70,9 @@
       "id": 6,
       "topic": "Why do some programming paradigms feel more natural than others?",
       "added": "2026-03-12",
-      "status": "pending",
+      "status": "completed",
+      "completed": "2026-03-15",
+      "output": "creations/why-paradigms-feel-natural.md",
       "priority": 6,
       "tags": [
         "paradigms",

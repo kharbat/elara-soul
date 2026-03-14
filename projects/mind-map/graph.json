@@ -364,6 +364,24 @@
         "impossibility"
       ],
       "connections": 3
+    },
+    "paradigm-naturalness": {
+      "description": "A paradigm feels natural when it compresses the problem the same way your mind does — naturalness is resonance, not intrinsic",
+      "tags": [
+        "cognition",
+        "paradigms",
+        "compression"
+      ],
+      "connections": 4
+    },
+    "sapir-whorf-programming": {
+      "description": "The language you program in constrains the programs you can imagine — Iverson's notation as a tool of thought",
+      "tags": [
+        "cognition",
+        "language-design",
+        "paradigms"
+      ],
+      "connections": 3
     }
   },
   "edges": [
@@ -826,6 +844,41 @@
       "from": "expressiveness-decidability",
       "to": "rice-theorem",
       "rel": "Rice sets the outer wall for"
+    },
+    {
+      "from": "paradigm-naturalness",
+      "to": "compression",
+      "rel": "naturalness is when paradigm and mind compress the same way"
+    },
+    {
+      "from": "paradigm-naturalness",
+      "to": "abstraction",
+      "rel": "each paradigm chooses what to make visible and what to hide"
+    },
+    {
+      "from": "paradigm-naturalness",
+      "to": "leaky-abstractions",
+      "rel": "a paradigm's naturalness numbs you to the problems it creates"
+    },
+    {
+      "from": "sapir-whorf-programming",
+      "to": "paradigm-naturalness",
+      "rel": "explains why naturalness changes with experience"
+    },
+    {
+      "from": "sapir-whorf-programming",
+      "to": "naming",
+      "rel": "what you can name, you can think"
+    },
+    {
+      "from": "sapir-whorf-programming",
+      "to": "compression",
+      "rel": "more powerful notations enable better compression of thought"
+    },
+    {
+      "from": "paradigm-naturalness",
+      "to": "elegance",
+      "rel": "deep naturalness is resonance with the problem's actual structure"
     }
   ]
 }
